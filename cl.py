@@ -1,10 +1,10 @@
 import requests
 from datetime import datetime
-import json
 import os
+import json
 
 # --- CONFIGURAÇÃO ---
-TOKEN = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjhhYmQ5M2JhLTIxNDgtNDdhNC1iNTFiLTQ0Mzg1MTJlNzcxZCIsImlhdCI6MTc3MjExMjEwMywic3ViIjoiZGV2ZWxvcGVyL2QxNGM1YzEzLTA2NTYtNDRmNi0wNDM3LTk2ZDBmYjg2MDdkZCIsInNjb3BlcyI6WyJyb3lhbGUiXSwibGltaXRzIjpbeyJ0aWVyIjoiZGV2ZWxvcGVyL3NpbHZlciIsInR5cGUiOiJ0aHJvdHRsaW5nIn0seyJjaWRycyI6WyIxOTEuNTcuMi4yMjYiXSwidHlwZSI6ImNsaWVudCJ9XX0.ofvwmebApc8PqLtaN3mMcSNQEGeSM_SGIxcKsF7VECSVhCiKAbkfTIbKHKh6j9Nf2SV4tywxNd6A_1uQkuzO0Q"
+TOKEN = os.getenv('CLASH_TOKEN')
 TAG_JOGADOR = "%23PPVL828U"
 NOME_ARQUIVO = "historico.json"
 
@@ -23,7 +23,7 @@ def salvar_historico(dados):
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def atualizar_batalhas():
-    url = f"https://api.clashroyale.com/v1/players/{TAG_JOGADOR}/battlelog"
+    url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
@@ -52,4 +52,5 @@ def atualizar_batalhas():
         print(f"Erro ao acessar API: {response.status_code}")
 
 # Executa o processo
+
 atualizar_batalhas()
