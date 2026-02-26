@@ -27,7 +27,7 @@ def salvar_historico(dados):
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def atualizar_batalhas():
-url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
+    url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
@@ -58,6 +58,7 @@ url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
 # Executa o processo
 
 atualizar_batalhas()
+
 
 
 
