@@ -9,7 +9,7 @@ if not TOKEN:
     print("ERRO CRÍTICO: O GitHub não encontrou o Secret 'CLASH_TOKEN'!")
 else:
     print(f"Token detectado com sucesso (Início: {TOKEN[:10]}...)")
-TAG_JOGADOR = "%23PPVL828U"
+TAG_JOGADOR = "PPVL828U"
 NOME_ARQUIVO = "historico.json"
 
 headers = {"Authorization": f"Bearer {TOKEN}"}
@@ -27,7 +27,7 @@ def salvar_historico(dados):
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def atualizar_batalhas():
-    url = f"https://cr-proxy.vercel.app/v1/players/{TAG_JOGADOR}/battlelog"
+url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
     response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
@@ -58,5 +58,6 @@ def atualizar_batalhas():
 # Executa o processo
 
 atualizar_batalhas()
+
 
 
