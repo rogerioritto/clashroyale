@@ -5,6 +5,10 @@ import json
 
 # --- CONFIGURAÇÃO ---
 TOKEN = os.getenv('CLASH_TOKEN')
+if not TOKEN:
+    print("ERRO CRÍTICO: O GitHub não encontrou o Secret 'CLASH_TOKEN'!")
+else:
+    print(f"Token detectado com sucesso (Início: {TOKEN[:10]}...)")
 TAG_JOGADOR = "%23PPVL828U"
 NOME_ARQUIVO = "historico.json"
 
@@ -54,3 +58,4 @@ def atualizar_batalhas():
 # Executa o processo
 
 atualizar_batalhas()
+
