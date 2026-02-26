@@ -20,7 +20,7 @@ def salvar_historico(dados):
         json.dump(dados, f, indent=4, ensure_ascii=False)
 
 def tentar_atualizar():
-    url = f"https://proxy.royaleapi.dev/v1/players/{TAG_JOGADOR}/battlelog"
+    url = f"https://cr-proxy.vercel.app/v1/players/{TAG_JOGADOR}/battlelog"
     
     # O robô vai tentar cada token da lista até um funcionar
     for i, token in enumerate(TOKENS):
@@ -60,3 +60,4 @@ def processar_dados(novas_batalhas):
 
 if __name__ == "__main__":
     tentar_atualizar()
+
