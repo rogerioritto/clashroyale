@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash Royale - Evolução de Troféus</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #1a1a2e; color: white; text-align: center; }
+        .container { width: 90%; max-width: 900px; margin: auto; background: #16213e; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .controls { margin-bottom: 20px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        button, input { padding: 10px; border-radius: 5px; border: none; cursor: pointer; }
+        button { background-color: #e94560; color: white; font-weight: bold; }
+        button:hover { background-color: #ff2e63; }
+        input { width: 150px; }
+        canvas { background-color: #ffffff10; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>🏆 Minha Evolução de Troféus</h1>
+
+    <div class="container">
+        <div class="controls">
+            <button onclick="filtrarUltimas(10)">Últimas 10</button>
+            <button onclick="filtrarUltimas(50)">Últimas 50</button>
+            <input type="date" id="dataFiltro" onchange="filtrarPorData()">
+            <button onclick="resetarFiltro()">Ver Tudo</button>
+        </div>
+        
+        <canvas id="meuGrafico"></canvas>
+    </div>
+
+    <script>
+        let dadosOriginais = [];
+        let meuGrafico;
+
+        // Carrega os dados gerados pelo Python
+        async function carregarDados() {
+            const response = await fetch('dados_grafico.json');
+            dadosOriginais = await response.json();
+            renderizarGrafico(dadosOriginais);
+        }
+
+        function renderizarGrafico(dados) {
+            const ctx = document.getElementById('meuGrafico').getContext('2d');
+            const labels = dados.map(d => d.data); // Eixo X: Data e Hora
+            const trofeus = dados.map(d => d.trofeus); // Eixo Y: Troféus
+
+            if (meuGrafico) meuGrafico.destroy();
+
+            meuGrafico = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Troféus',
+                        data: trofeus,
+                        borderColor: '#e94560',
+                        backgroundColor: 'rgba(233, 69, 96, 0.2)',
+                        borderWidth: 3,
+                        tension: 0.3, // Deixa a linha suave
+                        pointRadius: 4,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { labels: { color: 'white' } }
+                    },
+                    scales: {
+                        y: { ticks: { color: 'white' }, grid: { color: '#ffffff20' } },
+                        x: { display: false } // Esconde o excesso de datas no eixo X
+                    }
+                }
+            });
+        }
+
+        // --- FUNÇÕES DE FILTRO SOLICITADAS ---
+
+        function filtrarUltimas(n) {
+            const filtrados = dadosOriginais.slice(-n); // Pega as últimas N partidas
+            renderizarGrafico(filtrados);
+        }
+
+        function filtrarPorData() {
+            const dataInput = document.getElementById('dataFiltro').value.replace(/-/g, '');
+            const filtrados = dadosOriginais.filter(d => d.data.replace(/-/g, '').startsWith(dataInput));
+            renderizarGrafico(filtrados);
+        }
+
+        function resetarFiltro() {
+            renderizarGrafico(dadosOriginais);
+        }
+
+        carregarDados();
+    </script>
+</body>
+</html>
