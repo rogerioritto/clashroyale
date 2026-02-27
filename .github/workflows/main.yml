@@ -22,7 +22,8 @@ jobs:
 
       - name: Rodar Script
         env:
-          CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }} # Puxa o seu Token dos Secrets
+          CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+          CLASH_TAG: ${{ secrets.CLASH_TAG }}
         run: python cl.py
 
       - name: Salvar Mudanças

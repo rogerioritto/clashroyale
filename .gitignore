@@ -1,0 +1,8 @@
+.mcp.json
+.claude/
+.env
+.env.local
+*.env
+.DS_Store
+__pycache__/
+*.pyc
