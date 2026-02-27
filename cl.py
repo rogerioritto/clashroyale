@@ -37,17 +37,29 @@ def atualizar_batalhas():
 
 def gerar_dados_grafico(historico):
     dados_simplificados = []
-    # Invertemos para que o gráfico vá do passado para o futuro
     for b in reversed(historico):
+        jogador = b['team'][0]
+        oponente = b['opponent'][0]
         # Filtramos apenas partidas que alteram troféus (Ladder)
-        if 'startingTrophies' in b['team'][0]:
-            # Formatamos a data para ser fácil de ler no site
+        if 'startingTrophies' in jogador:
             data_limpa = b['battleTime'].replace('T', ' ').replace('.000Z', '')
+            # Determinar resultado comparando crowns
+            if jogador['crowns'] > oponente['crowns']:
+                resultado = "vitoria"
+            else:
+                resultado = "derrota"
+            # Extrair deck do jogador (nome + ícone)
+            deck = [{"nome": c['name'], "icone": c['iconUrls']['medium']} for c in jogador.get('cards', [])]
+            # Extrair cartas do oponente (nome + ícone)
+            oponente_cartas = [{"nome": c['name'], "icone": c['iconUrls']['medium']} for c in oponente.get('cards', [])]
             dados_simplificados.append({
                 "data": data_limpa,
-                "trofeus": b['team'][0]['startingTrophies']
+                "trofeus": jogador['startingTrophies'],
+                "resultado": resultado,
+                "deck": deck,
+                "oponente_cartas": oponente_cartas
             })
-    
+
     salvar_json(NOME_DADOS_GRAFICO, dados_simplificados)
     print("Dados para o gráfico atualizados!")
 
