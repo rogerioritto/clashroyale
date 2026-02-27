@@ -2,29 +2,34 @@ name: Atualizar Batalhas
 on:
   schedule:
     - cron: '0 0 * * *' # Roda todo dia à meia-noite
-  workflow_dispatch: # Permite rodar manualmente clicando em um botão
+  workflow_dispatch: # Permite rodar manualmente
 
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permite que o robô salve o JSON no repo
+      contents: write # Permite que o robô salve os arquivos no seu repositório
     steps:
       - uses: actions/checkout@v3
+
       - name: Configurar Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12' # Mesma versão do seu PC
+          python-version: '3.12'
+
       - name: Instalar Dependências
         run: pip install -r requirements.txt
+
       - name: Rodar Script
         env:
-          CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+          CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }} # Puxa o seu Token dos Secrets
         run: python cl.py
+
       - name: Salvar Mudanças
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add historico.json
-          git commit -m "Auto: Atualizando histórico" || echo "Sem mudanças"
+          # O PONTO (.) ABAIXO DIZ: "SALVE TUDO" (histórico e dados do gráfico)
+          git add . 
+          git commit -m "Auto: Atualizando histórico e dados do gráfico" || echo "Sem mudanças"
           git push
