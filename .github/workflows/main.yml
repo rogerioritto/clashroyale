@@ -1,7 +1,7 @@
 name: Atualizar Batalhas
 on:
   schedule:
-    - cron: '0 0 * * *' # Roda todo dia à meia-noite
+    - cron: '0 3 * * *' # Roda todo dia à meia-noite (BRT = UTC-3)
   workflow_dispatch: # Permite rodar manualmente
 
 jobs:
