@@ -1,7 +1,7 @@
 [
     {
         "data": "20260223 004814",
-        "trofeus": 7190,
+        "trofeus": 7160,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 2,
@@ -94,7 +94,7 @@
     },
     {
         "data": "20260223 005157",
-        "trofeus": 7160,
+        "trofeus": 7188,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -187,7 +187,7 @@
     },
     {
         "data": "20260223 005351",
-        "trofeus": 7188,
+        "trofeus": 7159,
         "resultado": "derrota",
         "crowns_jogador": 0,
         "crowns_oponente": 3,
@@ -280,7 +280,7 @@
     },
     {
         "data": "20260224 223116",
-        "trofeus": 7159,
+        "trofeus": 7188,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -373,7 +373,7 @@
     },
     {
         "data": "20260224 223305",
-        "trofeus": 7188,
+        "trofeus": 7158,
         "resultado": "derrota",
         "crowns_jogador": 0,
         "crowns_oponente": 3,
@@ -466,7 +466,7 @@
     },
     {
         "data": "20260224 223637",
-        "trofeus": 7158,
+        "trofeus": 7127,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 2,
@@ -559,7 +559,7 @@
     },
     {
         "data": "20260224 224349",
-        "trofeus": 7127,
+        "trofeus": 7097,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 2,
@@ -652,7 +652,7 @@
     },
     {
         "data": "20260225 144357",
-        "trofeus": 7097,
+        "trofeus": 7127,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -745,7 +745,7 @@
     },
     {
         "data": "20260225 144712",
-        "trofeus": 7127,
+        "trofeus": 7157,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -838,7 +838,7 @@
     },
     {
         "data": "20260225 144816",
-        "trofeus": 7157,
+        "trofeus": 7127,
         "resultado": "derrota",
         "crowns_jogador": 0,
         "crowns_oponente": 3,
@@ -931,7 +931,7 @@
     },
     {
         "data": "20260225 145245",
-        "trofeus": 7127,
+        "trofeus": 7097,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 2,
@@ -1024,7 +1024,7 @@
     },
     {
         "data": "20260225 145557",
-        "trofeus": 7097,
+        "trofeus": 7127,
         "resultado": "vitoria",
         "crowns_jogador": 2,
         "crowns_oponente": 1,
@@ -1117,7 +1117,7 @@
     },
     {
         "data": "20260225 145907",
-        "trofeus": 7127,
+        "trofeus": 7156,
         "resultado": "vitoria",
         "crowns_jogador": 2,
         "crowns_oponente": 0,
@@ -1210,7 +1210,7 @@
     },
     {
         "data": "20260225 150311",
-        "trofeus": 7156,
+        "trofeus": 7186,
         "resultado": "vitoria",
         "crowns_jogador": 2,
         "crowns_oponente": 1,
@@ -1303,7 +1303,7 @@
     },
     {
         "data": "20260225 150621",
-        "trofeus": 7186,
+        "trofeus": 7215,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -1396,7 +1396,7 @@
     },
     {
         "data": "20260225 151130",
-        "trofeus": 7215,
+        "trofeus": 7244,
         "resultado": "vitoria",
         "crowns_jogador": 2,
         "crowns_oponente": 1,
@@ -1489,7 +1489,7 @@
     },
     {
         "data": "20260225 151511",
-        "trofeus": 7244,
+        "trofeus": 7214,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 3,
@@ -1582,7 +1582,7 @@
     },
     {
         "data": "20260225 151816",
-        "trofeus": 7214,
+        "trofeus": 7243,
         "resultado": "vitoria",
         "crowns_jogador": 3,
         "crowns_oponente": 0,
@@ -1675,7 +1675,7 @@
     },
     {
         "data": "20260225 152814",
-        "trofeus": 7243,
+        "trofeus": 7212,
         "resultado": "derrota",
         "crowns_jogador": 1,
         "crowns_oponente": 2,
@@ -1768,7 +1768,7 @@
     },
     {
         "data": "20260225 153126",
-        "trofeus": 7212,
+        "trofeus": 7239,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -1861,7 +1861,7 @@
     },
     {
         "data": "20260225 153458",
-        "trofeus": 7239,
+        "trofeus": 7267,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -1954,7 +1954,7 @@
     },
     {
         "data": "20260225 153819",
-        "trofeus": 7267,
+        "trofeus": 7237,
         "resultado": "derrota",
         "crowns_jogador": 0,
         "crowns_oponente": 3,
@@ -2047,7 +2047,7 @@
     },
     {
         "data": "20260225 154606",
-        "trofeus": 7237,
+        "trofeus": 7267,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -2140,7 +2140,7 @@
     },
     {
         "data": "20260225 155027",
-        "trofeus": 7267,
+        "trofeus": 7297,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -2233,7 +2233,7 @@
     },
     {
         "data": "20260225 155555",
-        "trofeus": 7297,
+        "trofeus": 7326,
         "resultado": "vitoria",
         "crowns_jogador": 2,
         "crowns_oponente": 0,
@@ -2326,7 +2326,7 @@
     },
     {
         "data": "20260225 155921",
-        "trofeus": 7326,
+        "trofeus": 7356,
         "resultado": "vitoria",
         "crowns_jogador": 1,
         "crowns_oponente": 0,
@@ -2419,7 +2419,7 @@
     },
     {
         "data": "20260228 011812",
-        "trofeus": 7356,
+        "trofeus": 7327,
         "resultado": "derrota",
         "crowns_jogador": 0,
         "crowns_oponente": 3,
