@@ -6,7 +6,7 @@ from datetime import datetime
 
 # --- CONFIGURACAO ---
 TOKEN = os.getenv('CLASH_TOKEN')
-TAG_JOGADOR = os.getenv('CLASH_TAG', '%23PPVL828U')
+TAG_JOGADOR = os.getenv('CLASH_TAG') or '%23PPVL828U'
 NOME_ARQUIVO = "historico.json"
 NOME_DADOS_GRAFICO = "dados_grafico.json"
 
