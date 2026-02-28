@@ -101,9 +101,11 @@ def gerar_dados_grafico(historico):
                 "nivel": c.get('level', 0)
             } for c in cartas_oponente]
 
+            trofeus_finais = jogador['startingTrophies'] + jogador.get('trophyChange', 0)
+
             dados_simplificados.append({
                 "data": data_limpa,
-                "trofeus": jogador['startingTrophies'],
+                "trofeus": trofeus_finais,
                 "resultado": resultado,
                 "crowns_jogador": crowns_jogador,
                 "crowns_oponente": crowns_oponente,
