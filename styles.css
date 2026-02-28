@@ -236,7 +236,81 @@ canvas {
     color: var(--text-primary);
 }
 
-/* === Intel Grid === */
+/* === Intel Section (Premium Layout) === */
+.intel-section {
+    margin-bottom: 20px;
+}
+
+.intel-section-header {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.intel-section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.intel-grid-premium {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.panel-premium {
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.panel-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+/* === Tab System === */
+.panel-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.panel-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    border-bottom: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.panel-tab:hover {
+    color: var(--text-primary);
+}
+
+.panel-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+/* === Intel Grid (legacy, kept for responsive) === */
 .intel-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -294,11 +368,18 @@ canvas {
 .counter-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: var(--bg-card-inner);
-    border-radius: 8px;
-    padding: 8px 10px;
-    transition: background 0.3s;
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.counter-item:hover {
+    transform: translateY(-1px);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .counter-item img {
@@ -492,9 +573,16 @@ canvas {
     align-items: center;
     gap: 10px;
     background: var(--bg-card-inner);
-    border-radius: 8px;
-    padding: 8px 10px;
-    transition: background 0.3s;
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.wr-card-item:hover {
+    transform: translateY(-1px);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .wr-card-item img {
@@ -553,9 +641,16 @@ canvas {
     align-items: center;
     gap: 10px;
     background: var(--bg-card-inner);
-    border-radius: 8px;
-    padding: 10px 12px;
-    transition: background 0.3s;
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.matchup-item:hover {
+    transform: translateY(-1px);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .matchup-item img {
@@ -586,69 +681,6 @@ canvas {
     font-weight: 700;
     min-width: 60px;
     text-align: right;
-}
-
-/* === Tech Card Suggestions === */
-.tech-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
-
-.tech-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--bg-card-inner);
-    border-radius: 8px;
-    padding: 10px 12px;
-    transition: background 0.3s;
-}
-
-.tech-item .tech-problem {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 120px;
-}
-
-.tech-item .tech-problem img {
-    width: 32px;
-    height: 38px;
-    border-radius: 4px;
-    background: var(--bg-primary);
-    object-fit: cover;
-}
-
-.tech-item .tech-arrow {
-    color: var(--text-muted);
-    font-size: 1.2rem;
-}
-
-.tech-item .tech-solutions {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.tech-item .tech-solutions .tech-solution {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    padding: 4px 8px;
-    font-size: 0.8rem;
-    color: var(--text-dim);
-}
-
-.tech-item .tech-solutions img {
-    width: 24px;
-    height: 29px;
-    border-radius: 3px;
-    background: var(--bg-primary);
-    object-fit: cover;
 }
 
 /* === Skeleton Loading === */
@@ -704,6 +736,7 @@ canvas {
     .header-stats { grid-template-columns: 1fr; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
     .intel-grid { grid-template-columns: 1fr; }
+    .intel-grid-premium { grid-template-columns: 1fr; }
     .counter-list { grid-template-columns: 1fr; }
     .dashboard-header h1 { font-size: 1.4rem; }
     .theme-toggle { position: static; margin-left: 10px; }

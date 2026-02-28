@@ -59,7 +59,7 @@ function mostrarSkeletons() {
         sk.id = 'skeletonGrafico';
         canvas.parentElement.insertBefore(sk, canvas);
     }
-    ['deckAnalise', 'hardCounters', 'softCounters', 'wrPorCarta', 'matchupAnalise', 'techCards'].forEach(id => {
+    ['deckAnalise', 'hardCounters', 'softCounters', 'wrPorCarta', 'matchupAnalise'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.innerHTML = '<div class="skeleton skeleton-block"></div><div class="skeleton skeleton-block"></div>';
     });
@@ -119,7 +119,6 @@ function renderizarTudo() {
     renderizarSoftCounters(dadosFiltrados);
     renderizarWRPorCarta(dadosFiltrados);
     renderizarMatchups(dadosFiltrados);
-    renderizarTechCards(dadosFiltrados);
     renderizarHistorico(dadosFiltrados);
 }
 
@@ -131,7 +130,6 @@ function renderizarTudoSemHeader() {
     renderizarSoftCounters(dadosFiltrados);
     renderizarWRPorCarta(dadosFiltrados);
     renderizarMatchups(dadosFiltrados);
-    renderizarTechCards(dadosFiltrados);
     renderizarHistorico(dadosFiltrados);
 }
 
@@ -562,76 +560,24 @@ function renderizarMatchups(dados) {
 }
 
 // ============================================================
-// 4.4 TECH CARD SUGGESTIONS
+// COUNTER TAB SWITCHING
 // ============================================================
-const CONTRAMEDIDAS = {
-    'Mega Knight': ['Inferno Tower', 'P.E.K.K.A', 'Inferno Dragon', 'Knight'],
-    'Balloon': ['Musketeer', 'Tesla', 'Minions', 'Wizard', 'Electro Dragon'],
-    'Golem': ['Inferno Tower', 'Inferno Dragon', 'P.E.K.K.A', 'Mini P.E.K.K.A'],
-    'Hog Rider': ['Tornado', 'Mini P.E.K.K.A', 'Cannon', 'Tesla'],
-    'P.E.K.K.A': ['Inferno Tower', 'Inferno Dragon', 'Skeleton Army', 'Minion Horde'],
-    'Lava Hound': ['Musketeer', 'Inferno Tower', 'Inferno Dragon', 'Electro Wizard'],
-    'Royal Giant': ['Inferno Tower', 'P.E.K.K.A', 'Mini P.E.K.K.A', 'Fisherman'],
-    'Giant': ['Inferno Tower', 'Mini P.E.K.K.A', 'P.E.K.K.A', 'Inferno Dragon'],
-    'X-Bow': ['Earthquake', 'Royal Giant', 'Fireball', 'Giant'],
-    'Graveyard': ['Poison', 'Valkyrie', 'Archers', 'Baby Dragon'],
-    'Sparky': ['Electro Wizard', 'Zap', 'Rocket', 'Lightning'],
-    'Elite Barbarians': ['Valkyrie', 'Knight', 'P.E.K.K.A', 'Skeleton Army'],
-    'Goblin Barrel': ['The Log', 'Barbarian Barrel', 'Tornado'],
-    'Witch': ['Valkyrie', 'Lightning', 'Fireball', 'Poison'],
-    'Wizard': ['Fireball', 'Lightning', 'Rocket', 'Poison'],
-    'Mortar': ['Earthquake', 'Miner', 'Hog Rider', 'Royal Giant'],
-    'Three Musketeers': ['Fireball', 'Lightning', 'Rocket'],
-    'Skeleton King': ['Poison', 'Valkyrie', 'Fireball'],
-    'Monk': ['Lightning', 'Rocket', 'Inferno Dragon'],
-    'Phoenix': ['Poison', 'Lightning', 'Rocket', 'Freeze'],
-};
+function alternarCounterTab(tipo) {
+    const hardEl = document.getElementById('hardCounters');
+    const softEl = document.getElementById('softCounters');
+    const tabs = document.querySelectorAll('.panel-tab');
 
-function renderizarTechCards(dados) {
-    const container = document.getElementById('techCards');
-    if (!container) return;
+    tabs.forEach(t => t.classList.remove('active'));
 
-    const derrotas = dados.filter(d => d.resultado === 'derrota');
-    if (derrotas.length === 0) {
-        container.innerHTML = '<p style="color:var(--text-muted)">Sem derrotas no periodo.</p>';
-        return;
+    if (tipo === 'hard') {
+        hardEl.style.display = '';
+        softEl.style.display = 'none';
+        tabs[0].classList.add('active');
+    } else {
+        hardEl.style.display = 'none';
+        softEl.style.display = '';
+        tabs[1].classList.add('active');
     }
-
-    // Count opponent cards in losses
-    const freq = {};
-    derrotas.forEach(d => {
-        if (!d.oponente_cartas) return;
-        d.oponente_cartas.forEach(c => {
-            if (!freq[c.nome]) freq[c.nome] = { nome: c.nome, icone: c.icone, count: 0 };
-            freq[c.nome].count++;
-        });
-    });
-
-    // Filter only cards that have known counter-measures
-    const problemas = Object.values(freq)
-        .filter(c => CONTRAMEDIDAS[c.nome])
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
-
-    if (problemas.length === 0) {
-        container.innerHTML = '<p style="color:var(--text-muted)">Sem sugestoes disponiveis.</p>';
-        return;
-    }
-
-    container.innerHTML = '<div class="tech-list">' + problemas.map(p => {
-        const solucoes = CONTRAMEDIDAS[p.nome] || [];
-        return `
-            <div class="tech-item">
-                <div class="tech-problem">
-                    <img src="${esc(p.icone)}" alt="${esc(p.nome)}" title="${esc(p.nome)}">
-                    <span style="color:var(--text-primary);font-size:0.85rem;font-weight:500">${esc(p.nome)}</span>
-                </div>
-                <span class="tech-arrow">\u2192</span>
-                <div class="tech-solutions">
-                    ${solucoes.map(s => `<div class="tech-solution">${s}</div>`).join('')}
-                </div>
-            </div>`;
-    }).join('') + '</div>';
 }
 
 // ============================================================
@@ -739,8 +685,8 @@ function renderizarHistorico(dados) {
                     <th onclick="ordenarHistorico('data')">Data ${sortArrow('data')}</th>
                     <th onclick="ordenarHistorico('resultado')">Resultado ${sortArrow('resultado')}</th>
                     <th onclick="ordenarHistorico('trofeus')">Trofeus ${sortArrow('trofeus')}</th>
-                    <th>Crowns</th>
                     <th>Deck</th>
+                    <th>Crowns</th>
                     <th>Deck Oponente</th>
                 </tr>
             </thead>
@@ -758,8 +704,8 @@ function renderizarHistorico(dados) {
                 <td>${formatarLabel(d.data)}</td>
                 <td><span class="resultado-badge ${d.resultado}">${resLabel}</span></td>
                 <td>${d.trofeus}</td>
-                <td>${crowns}</td>
                 <td><div class="mini-deck">${(d.deck || []).map(c => `<img src="${esc(c.icone)}" alt="${esc(c.nome)}" title="${esc(c.nome)}">`).join('')}</div></td>
+                <td style="text-align:center;font-weight:600;white-space:nowrap">${crowns}</td>
                 <td><div class="mini-deck">${(d.oponente_cartas || []).map(c => `<img src="${esc(c.icone)}" alt="${esc(c.nome)}" title="${esc(c.nome)}">`).join('')}</div></td>
             </tr>`;
     });

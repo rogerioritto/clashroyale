@@ -79,42 +79,41 @@
         </div>
 
         <!-- 2. Inteligencia Estrategica -->
-        <div class="intel-grid">
-            <!-- 2.1 Analisador de Deck -->
-            <div class="panel">
-                <div class="panel-title">Analise de Decks</div>
-                <div id="deckAnalise"></div>
-            </div>
-
-            <!-- 2.2 Hard Counters -->
-            <div class="panel">
-                <div class="panel-title">Hard Counters (Cartas Problema)</div>
-                <div class="counter-list" id="hardCounters"></div>
-            </div>
-
-            <!-- 4.1 Soft Counters -->
-            <div class="panel">
-                <div class="panel-title">Soft Counters (Cartas que Vence)</div>
-                <div class="counter-list" id="softCounters"></div>
-            </div>
-
-            <!-- 4.3 Matchup Analysis -->
-            <div class="panel">
-                <div class="panel-title">Matchup por Arquetipo</div>
-                <div id="matchupAnalise"></div>
-            </div>
+        <!-- 2.1 Analisador de Deck -->
+        <div class="panel">
+            <div class="panel-title">Analise de Decks</div>
+            <div id="deckAnalise"></div>
         </div>
 
-        <!-- 4.2 Win Rate por Carta Adversaria -->
-        <div class="panel">
-            <div class="panel-title">Win Rate por Carta Adversaria</div>
-            <div class="wr-card-list" id="wrPorCarta"></div>
-        </div>
+        <!-- Seção de Análise Estratégica Premium -->
+        <div class="intel-section">
+            <div class="intel-section-header">
+                <h2 class="intel-section-title">Inteligencia Estrategica</h2>
+            </div>
 
-        <!-- 4.4 Sugestao de Tech Cards -->
-        <div class="panel">
-            <div class="panel-title">Sugestoes de Tech Cards</div>
-            <div id="techCards"></div>
+            <div class="intel-grid-premium">
+                <!-- Counters (Hard + Soft em abas) -->
+                <div class="panel panel-premium">
+                    <div class="panel-tabs">
+                        <button class="panel-tab active" onclick="alternarCounterTab('hard')">Hard Counters</button>
+                        <button class="panel-tab" onclick="alternarCounterTab('soft')">Soft Counters</button>
+                    </div>
+                    <div class="counter-list" id="hardCounters"></div>
+                    <div class="counter-list" id="softCounters" style="display:none"></div>
+                </div>
+
+                <!-- Matchup por Arquetipo -->
+                <div class="panel panel-premium">
+                    <div class="panel-title">Matchup por Arquetipo</div>
+                    <div id="matchupAnalise"></div>
+                </div>
+            </div>
+
+            <!-- Win Rate por Carta Adversaria -->
+            <div class="panel panel-premium">
+                <div class="panel-title">Win Rate por Carta Adversaria</div>
+                <div class="wr-card-list" id="wrPorCarta"></div>
+            </div>
         </div>
 
         <!-- 3.2 Historico de Partidas -->
