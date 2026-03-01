@@ -46,9 +46,14 @@ def fazer_request(url, tentativas=2):
     return None
 
 
-def buscar_clas(min_score=30000, limit=10):
-    """Busca clas ativos com pontuacao minima."""
-    url = f"{API_BASE}/clans?minMembers=20&minScore={min_score}&limit={limit}"
+def buscar_clas(min_score=30000, limit=10, name=None):
+    """Busca clas ativos com pontuacao minima ou por nome."""
+    params = f"minMembers=15&limit={limit}"
+    if name:
+        params += f"&name={name}"
+    else:
+        params += f"&minScore={min_score}"
+    url = f"{API_BASE}/clans?{params}"
     data = fazer_request(url)
     if data and 'items' in data:
         return data['items']
@@ -88,18 +93,27 @@ def main():
 
     print("=== Coleta de Dados Globais por Arena ===")
 
-    # 1. Buscar clas em diferentes niveis para cobrir todas as faixas de trofeus
-    print("\n1. Buscando clas em diferentes niveis...")
-    niveis_score = [
-        (10000, 5, "Score baixo"),
-        (20000, 5, "Score medio"),
-        (30000, 5, "Score alto"),
-        (45000, 5, "Score muito alto"),
-    ]
+    # 1. Buscar clas variados para cobrir diferentes faixas de trofeus
+    print("\n1. Buscando clas variados...")
+    # Buscar por nomes comuns para encontrar clas de diferentes niveis
+    termos_busca = ["brasil", "team", "clan", "warriors", "kings",
+                    "dragon", "fire", "dark", "legend", "royal"]
     clas = []
     tags_ja_adicionados = set()
-    for min_score, limit, desc in niveis_score:
-        resultado_clas = buscar_clas(min_score=min_score, limit=limit)
+
+    # Primeiro buscar clas de topo
+    resultado_clas = buscar_clas(min_score=40000, limit=5)
+    for c in resultado_clas:
+        tag = c.get('tag', '')
+        if tag not in tags_ja_adicionados:
+            clas.append(c)
+            tags_ja_adicionados.add(tag)
+    print(f"  Top clas: {len(resultado_clas)} encontrados")
+    time.sleep(0.3)
+
+    # Depois buscar por nomes para variedade
+    for termo in termos_busca:
+        resultado_clas = buscar_clas(name=termo, limit=5)
         novos = 0
         for c in resultado_clas:
             tag = c.get('tag', '')
@@ -107,8 +121,11 @@ def main():
                 clas.append(c)
                 tags_ja_adicionados.add(tag)
                 novos += 1
-        print(f"  {desc} (min {min_score}): {len(resultado_clas)} encontrados, {novos} novos")
+        if novos > 0:
+            print(f"  Busca '{termo}': {novos} novos clas")
         time.sleep(0.3)
+        if len(clas) >= 20:
+            break
 
     print(f"  Total: {len(clas)} clas unicos")
 
@@ -127,7 +144,7 @@ def main():
         for m in membros:
             tag = m.get('tag', '')
             trofeus = m.get('trophies', 0)
-            if tag and tag not in jogadores and trofeus >= 5000:
+            if tag and tag not in jogadores and trofeus >= 4000:
                 jogadores[tag] = {
                     'tag': tag,
                     'trofeus': trofeus,
