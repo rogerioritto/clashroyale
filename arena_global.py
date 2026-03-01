@@ -88,15 +88,29 @@ def main():
 
     print("=== Coleta de Dados Globais por Arena ===")
 
-    # 1. Buscar clas ativos para encontrar jogadores
-    print("\n1. Buscando clas ativos...")
-    clas = buscar_clas(min_score=30000, limit=10)
-    print(f"  {len(clas)} clas encontrados")
+    # 1. Buscar clas em diferentes niveis para cobrir todas as faixas de trofeus
+    print("\n1. Buscando clas em diferentes niveis...")
+    niveis_score = [
+        (10000, 5, "Score baixo"),
+        (20000, 5, "Score medio"),
+        (30000, 5, "Score alto"),
+        (45000, 5, "Score muito alto"),
+    ]
+    clas = []
+    tags_ja_adicionados = set()
+    for min_score, limit, desc in niveis_score:
+        resultado_clas = buscar_clas(min_score=min_score, limit=limit)
+        novos = 0
+        for c in resultado_clas:
+            tag = c.get('tag', '')
+            if tag not in tags_ja_adicionados:
+                clas.append(c)
+                tags_ja_adicionados.add(tag)
+                novos += 1
+        print(f"  {desc} (min {min_score}): {len(resultado_clas)} encontrados, {novos} novos")
+        time.sleep(0.3)
 
-    if not clas:
-        print("  Tentando com score menor...")
-        clas = buscar_clas(min_score=20000, limit=10)
-        print(f"  {len(clas)} clas encontrados")
+    print(f"  Total: {len(clas)} clas unicos")
 
     if not clas:
         print("Nenhum cla encontrado. Salvando arquivo vazio.")
