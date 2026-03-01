@@ -20,8 +20,6 @@ FAIXAS_TROFEUS = [
     {"nome": "Arena 20+ (Top Ladder)", "min": 8000, "max": 99999},
 ]
 
-MAX_JOGADORES_POR_LOCATION = 50
-
 
 def fazer_request(url, tentativas=2):
     """Faz request com retry e tratamento de rate limit."""
@@ -32,13 +30,14 @@ def fazer_request(url, tentativas=2):
             if response.status_code == 200:
                 return response.json()
             elif response.status_code == 429:
-                print(f"  Rate limit, aguardando 5s... ({url})")
+                print(f"  Rate limit, aguardando 10s...")
+                time.sleep(10)
+                continue
+            elif response.status_code == 503:
+                print(f"  API indisponivel (503), aguardando 5s...")
                 time.sleep(5)
                 continue
             else:
-                print(f"  Erro {response.status_code}: {url}")
-                if response.status_code != 404:
-                    print(f"  Resposta: {response.text[:200]}")
                 return None
         except requests.exceptions.RequestException as e:
             print(f"  Erro de conexao: {e}")
@@ -47,165 +46,122 @@ def fazer_request(url, tentativas=2):
     return None
 
 
-def descobrir_locations():
-    """Descobre IDs de localizacoes validas via API."""
-    print("Descobrindo localizacoes disponiveis...")
-    data = fazer_request(f"{API_BASE}/locations?limit=500")
-    if not data:
-        print("  Falha ao buscar localizacoes.")
-        return []
-
-    items = data.get('items', data) if isinstance(data, dict) else data
-    if not isinstance(items, list):
-        print(f"  Formato inesperado: {type(items)}")
-        return []
-
-    print(f"  {len(items)} localizacoes encontradas")
-
-    # Priorizar paises grandes com muitos jogadores
-    paises_prioritarios = ['Brazil', 'United States', 'Germany', 'France',
-                           'Spain', 'Turkey', 'Russia', 'Mexico', 'Indonesia',
-                           'United Kingdom', 'Japan', 'South Korea', 'Italy']
-    selecionados = []
-    for nome in paises_prioritarios:
-        for loc in items:
-            if loc.get('name') == nome:
-                selecionados.append(loc)
-                break
-        if len(selecionados) >= 6:
-            break
-
-    # Fallback: pegar qualquer localizacao que seja pais
-    if len(selecionados) < 3:
-        paises = [loc for loc in items if loc.get('isCountry', False)]
-        for p in paises:
-            if p not in selecionados:
-                selecionados.append(p)
-            if len(selecionados) >= 5:
-                break
-
-    for loc in selecionados:
-        print(f"  Selecionado: {loc['name']} (ID: {loc['id']})")
-
-    return selecionados
+def buscar_clas(min_score=30000, limit=10):
+    """Busca clas ativos com pontuacao minima."""
+    url = f"{API_BASE}/clans?minMembers=20&minScore={min_score}&limit={limit}"
+    data = fazer_request(url)
+    if data and 'items' in data:
+        return data['items']
+    elif isinstance(data, list):
+        return data
+    return []
 
 
-def coletar_jogadores_ranking(locations):
-    """Coleta jogadores do ranking de diversas localizacoes."""
-    jogadores = {}
-
-    # Tentar diferentes endpoints de ranking
-    endpoints = [
-        ("rankings/players", "Ladder"),
-        ("pathoflegend/rankings/players", "Path of Legend"),
-    ]
-
-    for loc in locations:
-        loc_id = loc['id']
-        loc_nome = loc['name']
-
-        for endpoint, tipo_ranking in endpoints:
-            url = f"{API_BASE}/locations/{loc_id}/{endpoint}?limit={MAX_JOGADORES_POR_LOCATION}"
-            data = fazer_request(url)
-
-            if data:
-                items = data.get('items', data) if isinstance(data, dict) else data
-                if isinstance(items, list) and len(items) > 0:
-                    for p in items:
-                        tag = p.get('tag', '')
-                        if tag and tag not in jogadores:
-                            jogadores[tag] = {
-                                'tag': tag,
-                                'trofeus': p.get('trophies', 0),
-                                'nome': p.get('name', '')
-                            }
-                    print(f"  {loc_nome} ({tipo_ranking}): {len(items)} jogadores")
-                    break  # Encontrou jogadores, pular para proximo pais
-                else:
-                    # Debug: mostrar resposta para primeiro pais
-                    if loc == locations[0]:
-                        resp_preview = str(data)[:150]
-                        print(f"  DEBUG {loc_nome} ({tipo_ranking}): {resp_preview}")
-            else:
-                if loc == locations[0]:
-                    print(f"  DEBUG {loc_nome} ({tipo_ranking}): request falhou")
-
-        time.sleep(0.5)
-
-    return list(jogadores.values())
+def buscar_membros_cla(cla_tag):
+    """Busca membros de um cla."""
+    tag_encoded = cla_tag.replace('#', '%23')
+    url = f"{API_BASE}/clans/{tag_encoded}/members"
+    data = fazer_request(url)
+    if data and 'items' in data:
+        return data['items']
+    elif isinstance(data, list):
+        return data
+    return []
 
 
-def coletar_batalhas_jogador(tag):
-    """Coleta as batalhas recentes de um jogador."""
+def buscar_battlelog(tag):
+    """Busca as batalhas recentes de um jogador."""
     tag_encoded = tag.replace('#', '%23')
     url = f"{API_BASE}/players/{tag_encoded}/battlelog"
     data = fazer_request(url)
-    # battlelog retorna lista diretamente
     if isinstance(data, list):
         return data
     elif isinstance(data, dict) and 'items' in data:
         return data['items']
-    return data or []
+    return []
 
 
 def main():
     if not TOKEN:
-        print("ERRO: Token nao definido. Configure a variavel de ambiente CLASH_TOKEN.")
+        print("ERRO: Token nao definido.")
         sys.exit(1)
 
     print("=== Coleta de Dados Globais por Arena ===")
 
-    # 1. Descobrir localizacoes e coletar jogadores
-    print("\n1. Coletando jogadores dos rankings...")
-    locations = descobrir_locations()
+    # 1. Buscar clas ativos para encontrar jogadores
+    print("\n1. Buscando clas ativos...")
+    clas = buscar_clas(min_score=30000, limit=10)
+    print(f"  {len(clas)} clas encontrados")
 
-    if not locations:
-        print("Nenhuma localizacao encontrada. Salvando arquivo vazio.")
+    if not clas:
+        print("  Tentando com score menor...")
+        clas = buscar_clas(min_score=20000, limit=10)
+        print(f"  {len(clas)} clas encontrados")
+
+    if not clas:
+        print("Nenhum cla encontrado. Salvando arquivo vazio.")
         salvar_resultado_vazio()
         return
 
-    jogadores = coletar_jogadores_ranking(locations)
-    print(f"Total de jogadores unicos: {len(jogadores)}")
+    # 2. Coletar membros dos clas
+    print("\n2. Coletando membros dos clas...")
+    jogadores = {}
+    for cla in clas:
+        cla_tag = cla.get('tag', '')
+        cla_nome = cla.get('name', '?')
+        membros = buscar_membros_cla(cla_tag)
+        for m in membros:
+            tag = m.get('tag', '')
+            trofeus = m.get('trophies', 0)
+            if tag and tag not in jogadores and trofeus >= 5000:
+                jogadores[tag] = {
+                    'tag': tag,
+                    'trofeus': trofeus,
+                    'nome': m.get('name', '')
+                }
+        print(f"  {cla_nome}: {len(membros)} membros")
+        time.sleep(0.3)
+
+    print(f"  Total jogadores unicos (5000+ trofeus): {len(jogadores)}")
 
     if not jogadores:
         print("Nenhum jogador encontrado. Salvando arquivo vazio.")
         salvar_resultado_vazio()
         return
 
-    # 2. Coletar batalhas de cada jogador
-    print("\n2. Coletando batalhas...")
+    # 3. Coletar batalhas dos jogadores (amostra)
+    print("\n3. Coletando batalhas...")
+    jogadores_lista = list(jogadores.values())
+    max_coletar = min(len(jogadores_lista), 60)
     todas_batalhas = []
     coletados = 0
-    erros = 0
-    max_coletar = min(len(jogadores), 80)
 
-    for j in jogadores[:max_coletar]:
-        batalhas = coletar_batalhas_jogador(j['tag'])
-        if batalhas and isinstance(batalhas, list):
+    for j in jogadores_lista[:max_coletar]:
+        batalhas = buscar_battlelog(j['tag'])
+        if batalhas:
             todas_batalhas.extend(batalhas)
             coletados += 1
-        else:
-            erros += 1
-        if (coletados + erros) % 10 == 0:
-            print(f"  {coletados + erros}/{max_coletar} processados ({coletados} ok, {erros} erros, {len(todas_batalhas)} batalhas)")
+        if (coletados) % 10 == 0 and coletados > 0:
+            print(f"  {coletados}/{max_coletar} jogadores ok ({len(todas_batalhas)} batalhas)")
         time.sleep(0.3)
 
-    print(f"Total de batalhas coletadas: {len(todas_batalhas)}")
+    print(f"  Total: {coletados} jogadores, {len(todas_batalhas)} batalhas")
 
     if not todas_batalhas:
         print("Nenhuma batalha coletada. Salvando arquivo vazio.")
         salvar_resultado_vazio()
         return
 
-    # 3. Processar estatisticas por faixa
-    print("\n3. Processando estatisticas por faixa de trofeus...")
+    # 4. Processar estatisticas por faixa
+    print("\n4. Processando estatisticas...")
     resultado = processar_por_faixa(todas_batalhas)
 
-    # 4. Salvar resultado
+    # 5. Salvar resultado
     with open(NOME_ARQUIVO_GLOBAL, 'w', encoding='utf-8') as f:
         json.dump(resultado, f, indent=2, ensure_ascii=False)
 
-    print(f"\nDados globais salvos em {NOME_ARQUIVO_GLOBAL}!")
+    total_com_dados = sum(1 for r in resultado if r['total_partidas'] > 0)
+    print(f"\nDados salvos! {total_com_dados}/{len(FAIXAS_TROFEUS)} faixas com dados.")
 
 
 def processar_por_faixa(todas_batalhas):
@@ -247,7 +203,6 @@ def processar_por_faixa(todas_batalhas):
                     if not cartas_stats[nome]['icone']:
                         cartas_stats[nome]['icone'] = c.get('iconUrls', {}).get('medium', '')
 
-        # Converter para lista
         cartas_lista = []
         for nome, stats in cartas_stats.items():
             if stats['total'] >= 3:
