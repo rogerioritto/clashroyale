@@ -94,28 +94,41 @@ def coletar_jogadores_ranking(locations):
     """Coleta jogadores do ranking de diversas localizacoes."""
     jogadores = {}
 
+    # Tentar diferentes endpoints de ranking
+    endpoints = [
+        ("rankings/players", "Ladder"),
+        ("pathoflegend/rankings/players", "Path of Legend"),
+    ]
+
     for loc in locations:
         loc_id = loc['id']
         loc_nome = loc['name']
-        url = f"{API_BASE}/locations/{loc_id}/rankings/players?limit={MAX_JOGADORES_POR_LOCATION}"
 
-        data = fazer_request(url)
-        if data:
-            items = data.get('items', data) if isinstance(data, dict) else data
-            if isinstance(items, list):
-                for p in items:
-                    tag = p.get('tag', '')
-                    if tag and tag not in jogadores:
-                        jogadores[tag] = {
-                            'tag': tag,
-                            'trofeus': p.get('trophies', 0),
-                            'nome': p.get('name', '')
-                        }
-                print(f"  {loc_nome}: {len(items)} jogadores coletados")
+        for endpoint, tipo_ranking in endpoints:
+            url = f"{API_BASE}/locations/{loc_id}/{endpoint}?limit={MAX_JOGADORES_POR_LOCATION}"
+            data = fazer_request(url)
+
+            if data:
+                items = data.get('items', data) if isinstance(data, dict) else data
+                if isinstance(items, list) and len(items) > 0:
+                    for p in items:
+                        tag = p.get('tag', '')
+                        if tag and tag not in jogadores:
+                            jogadores[tag] = {
+                                'tag': tag,
+                                'trofeus': p.get('trophies', 0),
+                                'nome': p.get('name', '')
+                            }
+                    print(f"  {loc_nome} ({tipo_ranking}): {len(items)} jogadores")
+                    break  # Encontrou jogadores, pular para proximo pais
+                else:
+                    # Debug: mostrar resposta para primeiro pais
+                    if loc == locations[0]:
+                        resp_preview = str(data)[:150]
+                        print(f"  DEBUG {loc_nome} ({tipo_ranking}): {resp_preview}")
             else:
-                print(f"  {loc_nome}: formato inesperado")
-        else:
-            print(f"  {loc_nome}: sem dados")
+                if loc == locations[0]:
+                    print(f"  DEBUG {loc_nome} ({tipo_ranking}): request falhou")
 
         time.sleep(0.5)
 
