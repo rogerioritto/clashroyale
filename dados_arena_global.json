@@ -1,0 +1,44 @@
+[
+  {
+    "faixa": "Arena 15 (Legendary)",
+    "min_trofeus": 5000,
+    "max_trofeus": 5499,
+    "total_partidas": 0,
+    "cartas": []
+  },
+  {
+    "faixa": "Arena 16 (Champion)",
+    "min_trofeus": 5500,
+    "max_trofeus": 5999,
+    "total_partidas": 0,
+    "cartas": []
+  },
+  {
+    "faixa": "Arena 17 (Grand Champion)",
+    "min_trofeus": 6000,
+    "max_trofeus": 6499,
+    "total_partidas": 0,
+    "cartas": []
+  },
+  {
+    "faixa": "Arena 18 (Royal Champion)",
+    "min_trofeus": 6500,
+    "max_trofeus": 6999,
+    "total_partidas": 0,
+    "cartas": []
+  },
+  {
+    "faixa": "Arena 19 (Ultimate Champion)",
+    "min_trofeus": 7000,
+    "max_trofeus": 7999,
+    "total_partidas": 0,
+    "cartas": []
+  },
+  {
+    "faixa": "Arena 20+ (Top Ladder)",
+    "min_trofeus": 8000,
+    "max_trofeus": 99999,
+    "total_partidas": 0,
+    "cartas": []
+  }
+]
