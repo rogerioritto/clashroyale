@@ -50,7 +50,7 @@ def fazer_request(url, tentativas=2):
 def descobrir_locations():
     """Descobre IDs de localizacoes validas via API."""
     print("Descobrindo localizacoes disponiveis...")
-    data = fazer_request(f"{API_BASE}/locations?limit=50")
+    data = fazer_request(f"{API_BASE}/locations?limit=500")
     if not data:
         print("  Falha ao buscar localizacoes.")
         return []
@@ -60,23 +60,29 @@ def descobrir_locations():
         print(f"  Formato inesperado: {type(items)}")
         return []
 
-    # Filtrar apenas paises (isCountry=true) e pegar os maiores
-    paises = [loc for loc in items if loc.get('isCountry', False)]
-    # Priorizar paises grandes: BR, US, DE, FR, ES, TR, RU, MX, etc.
+    print(f"  {len(items)} localizacoes encontradas")
+
+    # Priorizar paises grandes com muitos jogadores
     paises_prioritarios = ['Brazil', 'United States', 'Germany', 'France',
-                           'Spain', 'Turkey', 'Russia', 'Mexico', 'Indonesia']
+                           'Spain', 'Turkey', 'Russia', 'Mexico', 'Indonesia',
+                           'United Kingdom', 'Japan', 'South Korea', 'Italy']
     selecionados = []
     for nome in paises_prioritarios:
-        for p in paises:
-            if p.get('name') == nome:
-                selecionados.append(p)
+        for loc in items:
+            if loc.get('name') == nome:
+                selecionados.append(loc)
                 break
-        if len(selecionados) >= 5:
+        if len(selecionados) >= 6:
             break
 
-    # Se nao encontrou o suficiente, pegar os primeiros
+    # Fallback: pegar qualquer localizacao que seja pais
     if len(selecionados) < 3:
-        selecionados = paises[:5]
+        paises = [loc for loc in items if loc.get('isCountry', False)]
+        for p in paises:
+            if p not in selecionados:
+                selecionados.append(p)
+            if len(selecionados) >= 5:
+                break
 
     for loc in selecionados:
         print(f"  Selecionado: {loc['name']} (ID: {loc['id']})")
