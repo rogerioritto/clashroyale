@@ -20,11 +20,16 @@ jobs:
       - name: Instalar Dependências
         run: pip install -r requirements.txt
 
-      - name: Rodar Script
+      - name: Rodar Script de Batalhas
         env:
           CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
           CLASH_TAG: ${{ secrets.CLASH_TAG }}
         run: python cl.py
+
+      - name: Rodar Script de Analise Global
+        env:
+          CLASH_TOKEN: ${{ secrets.CLASH_TOKEN }}
+        run: python arena_global.py
 
       - name: Salvar Mudanças
         run: |

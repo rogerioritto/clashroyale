@@ -4,6 +4,7 @@
 
 let dadosOriginais = [];
 let dadosFiltrados = [];
+let dadosArenaGlobal = [];
 let meuGrafico;
 let picker;
 let paginaAtual = 1;
@@ -233,6 +234,13 @@ function renderizarGrafico(dados) {
         return '#f87171';
     });
 
+    // Calcular min/max dinamico para o eixo Y com padding
+    const minTrofeus = trofeus.length > 0 ? Math.min(...trofeus) : 0;
+    const maxTrofeus = trofeus.length > 0 ? Math.max(...trofeus) : 100;
+    const padding = Math.max(Math.round((maxTrofeus - minTrofeus) * 0.15), 20);
+    const yMin = minTrofeus - padding;
+    const yMax = maxTrofeus + padding;
+
     const tema = document.documentElement.getAttribute('data-theme');
     const gridColor = tema === 'light' ? '#e5e7eb' : '#ffffff10';
     const gridColorX = tema === 'light' ? '#f3f4f6' : '#ffffff08';
@@ -273,6 +281,8 @@ function renderizarGrafico(dados) {
             },
             scales: {
                 y: {
+                    min: yMin,
+                    max: yMax,
                     ticks: { color: tickColor },
                     grid: { color: gridColor }
                 },
@@ -560,6 +570,141 @@ function renderizarMatchups(dados) {
 }
 
 // ============================================================
+// 5. ARENA GLOBAL ANALYSIS
+// ============================================================
+async function carregarDadosGlobais() {
+    try {
+        const response = await fetch('dados_arena_global.json');
+        dadosArenaGlobal = await response.json();
+    } catch (e) {
+        dadosArenaGlobal = [];
+    }
+    inicializarArenaSelect();
+}
+
+function inicializarArenaSelect() {
+    const select = document.getElementById('arenaSelect');
+    if (!select) return;
+
+    if (dadosArenaGlobal.length === 0) {
+        select.innerHTML = '<option value="">Sem dados globais</option>';
+        document.getElementById('arenaGlobalContent').innerHTML =
+            '<p style="color:var(--text-muted)">Dados globais ainda nao coletados. Execute arena_global.py para coletar.</p>';
+        return;
+    }
+
+    // Selecionar automaticamente a arena do jogador baseado nos trofeus atuais
+    const trofeuAtual = dadosOriginais.length > 0 ? dadosOriginais[dadosOriginais.length - 1].trofeus : 0;
+
+    select.innerHTML = dadosArenaGlobal.map((arena, idx) => {
+        const selecionada = trofeuAtual >= arena.min_trofeus && trofeuAtual <= arena.max_trofeus;
+        return `<option value="${idx}" ${selecionada ? 'selected' : ''}>${arena.faixa} (${arena.total_partidas} partidas)</option>`;
+    }).join('');
+
+    renderizarArenaGlobal();
+}
+
+function renderizarArenaGlobal() {
+    const select = document.getElementById('arenaSelect');
+    const container = document.getElementById('arenaGlobalContent');
+    if (!select || !container) return;
+
+    const idx = parseInt(select.value);
+    if (isNaN(idx) || !dadosArenaGlobal[idx]) {
+        container.innerHTML = '<p style="color:var(--text-muted)">Selecione uma arena.</p>';
+        return;
+    }
+
+    const arena = dadosArenaGlobal[idx];
+
+    if (!arena.cartas || arena.cartas.length === 0) {
+        container.innerHTML = '<p style="color:var(--text-muted)">Dados insuficientes para esta arena.</p>';
+        return;
+    }
+
+    // Calcular uso total para percentual
+    const totalUsos = arena.cartas.reduce((acc, c) => acc + c.uso, 0);
+
+    // Top cartas mais usadas
+    const topUsadas = arena.cartas.slice(0, 15);
+
+    // Top win rate (min 5 usos)
+    const topWR = [...arena.cartas]
+        .filter(c => c.uso >= 5)
+        .sort((a, b) => b.winRate - a.winRate)
+        .slice(0, 10);
+
+    // Piores win rates
+    const pioresWR = [...arena.cartas]
+        .filter(c => c.uso >= 5)
+        .sort((a, b) => a.winRate - b.winRate)
+        .slice(0, 10);
+
+    let html = `
+        <div class="arena-stats-summary">
+            <span class="arena-badge">${arena.total_partidas} partidas analisadas</span>
+            <span class="arena-badge">${arena.cartas.length} cartas encontradas</span>
+        </div>
+
+        <div class="arena-section">
+            <h3 class="arena-section-title">Cartas Mais Usadas</h3>
+            <div class="arena-card-list">
+                ${topUsadas.map((c, i) => {
+                    const pctUso = totalUsos > 0 ? ((c.uso / (arena.total_partidas || 1)) * 100).toFixed(0) : 0;
+                    const wrColor = c.winRate >= 50 ? 'var(--win)' : 'var(--lose)';
+                    return `
+                        <div class="arena-card-item">
+                            <span class="arena-rank">#${i + 1}</span>
+                            <img src="${esc(c.icone)}" alt="${esc(c.nome)}" title="${esc(c.nome)}">
+                            <div class="arena-card-info">
+                                <div class="arena-card-name">${esc(c.nome)}</div>
+                                <div class="arena-card-detail">${pctUso}% uso — ${c.uso}x</div>
+                            </div>
+                            <div class="arena-card-wr" style="color:${wrColor}">${c.winRate}% WR</div>
+                        </div>`;
+                }).join('')}
+            </div>
+        </div>
+
+        <div class="arena-grid-2col">
+            <div class="arena-section">
+                <h3 class="arena-section-title" style="color:var(--win)">Maiores Win Rates</h3>
+                <div class="arena-card-list compact">
+                    ${topWR.map(c => {
+                        return `
+                            <div class="arena-card-item compact">
+                                <img src="${esc(c.icone)}" alt="${esc(c.nome)}" title="${esc(c.nome)}">
+                                <div class="arena-card-info">
+                                    <div class="arena-card-name">${esc(c.nome)}</div>
+                                    <div class="arena-card-detail">${c.vitorias}V / ${c.uso} partidas</div>
+                                </div>
+                                <div class="arena-card-wr" style="color:var(--win)">${c.winRate}%</div>
+                            </div>`;
+                    }).join('')}
+                </div>
+            </div>
+            <div class="arena-section">
+                <h3 class="arena-section-title" style="color:var(--lose)">Piores Win Rates</h3>
+                <div class="arena-card-list compact">
+                    ${pioresWR.map(c => {
+                        return `
+                            <div class="arena-card-item compact">
+                                <img src="${esc(c.icone)}" alt="${esc(c.nome)}" title="${esc(c.nome)}">
+                                <div class="arena-card-info">
+                                    <div class="arena-card-name">${esc(c.nome)}</div>
+                                    <div class="arena-card-detail">${c.vitorias}V / ${c.uso} partidas</div>
+                                </div>
+                                <div class="arena-card-wr" style="color:var(--lose)">${c.winRate}%</div>
+                            </div>`;
+                    }).join('')}
+                </div>
+            </div>
+        </div>`;
+
+    container.innerHTML = html;
+}
+
+// ============================================================
 // COUNTER TAB SWITCHING
 // ============================================================
 function alternarCounterTab(tipo) {
@@ -814,3 +959,4 @@ if ('serviceWorker' in navigator) {
 // ============================================================
 inicializarTema();
 carregarDados();
+carregarDadosGlobais();

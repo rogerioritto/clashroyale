@@ -116,7 +116,21 @@
             </div>
         </div>
 
-        <!-- 3.2 Historico de Partidas -->
+        <!-- 4. Analise Global por Arena -->
+        <div class="panel">
+            <div class="panel-title">Meta Global por Arena</div>
+            <div class="arena-selector">
+                <label>Arena:</label>
+                <select id="arenaSelect" onchange="renderizarArenaGlobal()">
+                    <option value="">Carregando...</option>
+                </select>
+            </div>
+            <div id="arenaGlobalContent">
+                <p style="color:var(--text-muted)">Carregando dados globais...</p>
+            </div>
+        </div>
+
+        <!-- 5. Historico de Partidas -->
         <div class="panel">
             <div class="panel-title">Historico de Partidas</div>
             <div id="historicoTabela"></div>

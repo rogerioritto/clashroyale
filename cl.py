@@ -69,8 +69,16 @@ def calcular_elixir_medio(cartas):
     return round(sum(custos) / len(custos), 1)
 
 def gerar_dados_grafico(historico):
+    # Tipos de batalha que sao ladder (possuem trofeus reais)
+    TIPOS_LADDER = {'PvP', 'pathOfLegend'}
+
     dados_simplificados = []
     for b in reversed(historico):
+        # Ignorar batalhas que nao sao ladder (desafios, torneios, etc.)
+        tipo = b.get('type', '')
+        if tipo not in TIPOS_LADDER:
+            continue
+
         jogador = b['team'][0]
         oponente = b['opponent'][0]
         if 'startingTrophies' in jogador:
