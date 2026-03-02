@@ -61,13 +61,6 @@ def atualizar_batalhas():
 
     gerar_dados_grafico(historico)
 
-def calcular_elixir_medio(cartas):
-    """Calcula o custo medio de elixir de uma lista de cartas."""
-    custos = [c.get('elixirCost', 0) for c in cartas]
-    if not custos:
-        return 0
-    return round(sum(custos) / len(custos), 1)
-
 def gerar_dados_grafico(historico):
     # Tipos de batalha que sao ladder (possuem trofeus reais)
     TIPOS_LADDER = {'PvP', 'pathOfLegend'}
@@ -99,17 +92,19 @@ def gerar_dados_grafico(historico):
 
             deck = [{
                 "nome": c['name'],
-                "icone": c['iconUrls']['medium'],
-                "nivel": c.get('level', 0)
+                "icone": c['iconUrls']['medium']
             } for c in cartas_jogador]
 
             oponente_cartas = [{
                 "nome": c['name'],
-                "icone": c['iconUrls']['medium'],
-                "nivel": c.get('level', 0)
+                "icone": c['iconUrls']['medium']
             } for c in cartas_oponente]
 
-            trofeus_finais = jogador['startingTrophies'] + jogador.get('trophyChange', 0)
+            trophy_change = jogador.get('trophyChange')
+            if trophy_change is not None:
+                trofeus_finais = jogador['startingTrophies'] + trophy_change
+            else:
+                trofeus_finais = jogador['startingTrophies']
 
             dados_simplificados.append({
                 "data": data_limpa,
@@ -117,8 +112,6 @@ def gerar_dados_grafico(historico):
                 "resultado": resultado,
                 "crowns_jogador": crowns_jogador,
                 "crowns_oponente": crowns_oponente,
-                "elixir_medio": calcular_elixir_medio(cartas_jogador),
-                "elixir_medio_oponente": calcular_elixir_medio(cartas_oponente),
                 "deck": deck,
                 "oponente_cartas": oponente_cartas
             })

@@ -101,15 +101,19 @@ def main():
     clas = []
     tags_ja_adicionados = set()
 
-    # Primeiro buscar clas de topo
-    resultado_clas = buscar_clas(min_score=40000, limit=5)
-    for c in resultado_clas:
-        tag = c.get('tag', '')
-        if tag not in tags_ja_adicionados:
-            clas.append(c)
-            tags_ja_adicionados.add(tag)
-    print(f"  Top clas: {len(resultado_clas)} encontrados")
-    time.sleep(0.3)
+    # Buscar clas de diferentes niveis de score para cobrir mais faixas
+    faixas_score = [5000, 10000, 20000, 40000]
+    for min_score in faixas_score:
+        resultado_clas = buscar_clas(min_score=min_score, limit=5)
+        novos_score = 0
+        for c in resultado_clas:
+            tag = c.get('tag', '')
+            if tag not in tags_ja_adicionados:
+                clas.append(c)
+                tags_ja_adicionados.add(tag)
+                novos_score += 1
+        print(f"  Score >= {min_score}: {novos_score} novos clas")
+        time.sleep(0.3)
 
     # Depois buscar por nomes para variedade
     for termo in termos_busca:
@@ -144,7 +148,7 @@ def main():
         for m in membros:
             tag = m.get('tag', '')
             trofeus = m.get('trophies', 0)
-            if tag and tag not in jogadores and trofeus >= 4000:
+            if tag and tag not in jogadores and trofeus >= 5000:
                 jogadores[tag] = {
                     'tag': tag,
                     'trofeus': trofeus,
@@ -154,6 +158,7 @@ def main():
         time.sleep(0.3)
 
     print(f"  Total jogadores unicos (5000+ trofeus): {len(jogadores)}")
+
 
     if not jogadores:
         print("Nenhum jogador encontrado. Salvando arquivo vazio.")

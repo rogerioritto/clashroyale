@@ -399,7 +399,7 @@ function renderizarHardCounters(dados) {
 }
 
 // ============================================================
-// 4.1 SOFT COUNTERS
+// 4.1 CARTAS FAVORAVEIS (cartas frequentes nas vitorias)
 // ============================================================
 function renderizarSoftCounters(dados) {
     const container = document.getElementById('softCounters');
@@ -595,10 +595,23 @@ function inicializarArenaSelect() {
 
     // Selecionar automaticamente a arena do jogador baseado nos trofeus atuais
     const trofeuAtual = dadosOriginais.length > 0 ? dadosOriginais[dadosOriginais.length - 1].trofeus : 0;
+    const arenaJogador = dadosArenaGlobal.findIndex(a => trofeuAtual >= a.min_trofeus && trofeuAtual <= a.max_trofeus);
+    let arenaSelecionada = arenaJogador;
+
+    // Se a arena do jogador nao tem dados, buscar a mais proxima com dados
+    if (arenaSelecionada >= 0 && dadosArenaGlobal[arenaSelecionada].total_partidas === 0) {
+        const comDados = dadosArenaGlobal
+            .map((a, i) => ({ idx: i, partidas: a.total_partidas }))
+            .filter(a => a.partidas > 0);
+        if (comDados.length > 0) {
+            arenaSelecionada = comDados.reduce((prev, curr) =>
+                Math.abs(curr.idx - arenaJogador) < Math.abs(prev.idx - arenaJogador) ? curr : prev
+            ).idx;
+        }
+    }
 
     select.innerHTML = dadosArenaGlobal.map((arena, idx) => {
-        const selecionada = trofeuAtual >= arena.min_trofeus && trofeuAtual <= arena.max_trofeus;
-        return `<option value="${idx}" ${selecionada ? 'selected' : ''}>${arena.faixa} (${arena.total_partidas} partidas)</option>`;
+        return `<option value="${idx}" ${idx === arenaSelecionada ? 'selected' : ''}>${arena.faixa} (${arena.total_partidas} partidas)</option>`;
     }).join('');
 
     renderizarArenaGlobal();
@@ -935,15 +948,15 @@ function parseDateStr(str) {
     const h = parseInt(s.substring(8, 10)) || 0;
     const min = parseInt(s.substring(10, 12)) || 0;
     const sec = parseInt(s.substring(12, 14)) || 0;
-    return new Date(y, m, d, h, min, sec);
+    return new Date(Date.UTC(y, m, d, h, min, sec));
 }
 
 function formatarLabel(str) {
     const dt = parseDateStr(str);
-    const dd = String(dt.getDate()).padStart(2, '0');
-    const mm = String(dt.getMonth() + 1).padStart(2, '0');
-    const hh = String(dt.getHours()).padStart(2, '0');
-    const min = String(dt.getMinutes()).padStart(2, '0');
+    const dd = String(dt.getUTCDate()).padStart(2, '0');
+    const mm = String(dt.getUTCMonth() + 1).padStart(2, '0');
+    const hh = String(dt.getUTCHours()).padStart(2, '0');
+    const min = String(dt.getUTCMinutes()).padStart(2, '0');
     return `${dd}/${mm} ${hh}:${min}`;
 }
 
