@@ -820,6 +820,127 @@ canvas {
     .arena-grid-2col { grid-template-columns: 1fr; }
 }
 
+/* === Tab Navigation === */
+.tab-nav {
+    display: flex;
+    gap: 0;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.tab-nav::-webkit-scrollbar { display: none; }
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 3px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tab-btn:hover {
+    color: var(--text-primary);
+    background: var(--bg-card-inner);
+}
+
+.tab-btn.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    background: var(--bg-card-inner);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.filtro-panel {
+    margin-bottom: 12px;
+}
+
+.filtro-panel .filtro-container {
+    margin-bottom: 0;
+}
+
+/* === Level Analysis KPI Grid (6 columns) === */
+.kpi-grid-nivel {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+/* === Donut Charts === */
+.donut-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-height: 280px;
+}
+
+.donut-container canvas {
+    max-width: 260px;
+    max-height: 260px;
+}
+
+/* === Level Highlights === */
+.nivel-destaques-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.nivel-destaque-card {
+    background: var(--bg-card-inner);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    border: 1px solid transparent;
+}
+
+.nivel-destaque-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.nivel-destaque-card .destaque-valor {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.nivel-destaque-card .destaque-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.nivel-destaque-card .destaque-desc {
+    font-size: 0.8rem;
+    color: var(--text-sub);
+    line-height: 1.4;
+}
+
 /* === Skeleton Loading === */
 .skeleton {
     position: relative;
@@ -867,11 +988,14 @@ canvas {
 /* === Responsive === */
 @media (max-width: 900px) {
     .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+    .kpi-grid-nivel { grid-template-columns: repeat(3, 1fr); }
+    .nivel-destaques-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
     .header-stats { grid-template-columns: 1fr; }
     .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .kpi-grid-nivel { grid-template-columns: repeat(2, 1fr); }
     .intel-grid { grid-template-columns: 1fr; }
     .intel-grid-premium { grid-template-columns: 1fr; }
     .counter-list { grid-template-columns: 1fr; }
@@ -880,6 +1004,8 @@ canvas {
     .filtro-container { flex-direction: column; align-items: flex-start; }
     #rangePicker { width: 100%; }
     .mini-deck img { width: 20px; height: 24px; }
+    .tab-btn { padding: 12px 12px; font-size: 0.75rem; }
+    .nivel-destaques-grid { grid-template-columns: 1fr; }
 }
 
 /* === Flatpickr Light Mode Override === */

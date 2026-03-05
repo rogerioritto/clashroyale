@@ -1,3 +1,7 @@
-1. o grafico está contabilizando partidas que fiz no modo 'desafio classico', o que gera um erro, pois ele bota como se eu tivesse 0 trofeus durante essas partidas. 
-2. a visualização do grafico está ruim, não sei se é pelo motivo citado anteriormente, mas como ele conta algumas partidas como 0 trofeus, o eixo y do grafico está indo de 0 até 7000, ou seja, a visualização está praticamente uma linha reta na faixa dos 7300. 
-3. o proximo ponto não é uma correção, é uma tentativa de melhora. é possivel coletar dados de partidas globais? eu queria fazer uma analise mais detalhada de cada arena. meu objetivo era descobrir quais cartas são mais usadas em cada arena e quais possuem maior taxa de vitoria. com isso, teríamos os arquetipos de deck com maior e menor taxa de vitoria para cada arena. o meu intuito com essa analise seria ter melhores insights para minha arena atual. porque nem sempre o meta do jogo refleta na arena que você está
+quero implementar a seguinte função:
+
+tenho a percepção que na grande maioria das partidas as cartas do meu oponente tem nivel superiores as minhas e isso influencia bastante o jogo. queria calcular o nivel medio das cartas de cada oponente e comparar com o meu. 
+
+sendo assim, queria criar a estatistica juntamente com a parte do grafico, do win rate, que seria visando essa diferença do nivel medio do deck
+
+então queria algumas coisas como: comparar quantas partidas eu tenho nivel medio maior e nivel medio menor, comparar a minha taxa de vitoria contra decks de nivel medio maior e menor. coisas nesse sentido

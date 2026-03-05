@@ -6,9 +6,13 @@ let dadosOriginais = [];
 let dadosFiltrados = [];
 let dadosArenaGlobal = [];
 let meuGrafico;
+let graficoNivel;
+let donutDistribuicao;
+let donutWR;
 let picker;
 let paginaAtual = 1;
 let historicoOrdem = { coluna: 'data', dir: 'desc' };
+let abaAtiva = 'visao-geral';
 const ITENS_POR_PAGINA = 20;
 
 // ============================================================
@@ -34,12 +38,60 @@ function toggleTema() {
     document.documentElement.setAttribute('data-theme', novo);
     localStorage.setItem('clash-theme', novo);
     atualizarBotaoTema(novo);
-    if (dadosFiltrados.length > 0) renderizarGrafico(dadosFiltrados);
+    if (dadosFiltrados.length > 0) {
+        renderizarGrafico(dadosFiltrados);
+        if (abaAtiva === 'nivel') renderizarAnaliseNivel(dadosFiltrados);
+    }
 }
 
 function atualizarBotaoTema(tema) {
     const btn = document.getElementById('themeToggle');
     if (btn) btn.textContent = tema === 'dark' ? '\u2600\uFE0F' : '\uD83C\uDF19';
+}
+
+// ============================================================
+// TAB NAVIGATION
+// ============================================================
+function trocarAba(tab) {
+    abaAtiva = tab;
+
+    // Update buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+
+    // Update content
+    document.querySelectorAll('.tab-content').forEach(el => {
+        el.classList.toggle('active', el.id === 'tab-' + tab);
+    });
+
+    // Render the active tab content (lazy render)
+    renderizarAbaAtiva();
+}
+
+function renderizarAbaAtiva() {
+    switch (abaAtiva) {
+        case 'visao-geral':
+            renderizarGrafico(dadosFiltrados);
+            renderizarKPIs(dadosFiltrados);
+            break;
+        case 'estrategia':
+            renderizarDecks(dadosFiltrados);
+            renderizarHardCounters(dadosFiltrados);
+            renderizarSoftCounters(dadosFiltrados);
+            renderizarWRPorCarta(dadosFiltrados);
+            renderizarMatchups(dadosFiltrados);
+            break;
+        case 'nivel':
+            renderizarAnaliseNivel(dadosFiltrados);
+            break;
+        case 'meta-global':
+            renderizarArenaGlobal();
+            break;
+        case 'historico':
+            renderizarHistorico(dadosFiltrados);
+            break;
+    }
 }
 
 // ============================================================
@@ -113,25 +165,11 @@ async function carregarDados() {
 
 function renderizarTudo() {
     renderizarHeader();
-    renderizarGrafico(dadosFiltrados);
-    renderizarKPIs(dadosFiltrados);
-    renderizarDecks(dadosFiltrados);
-    renderizarHardCounters(dadosFiltrados);
-    renderizarSoftCounters(dadosFiltrados);
-    renderizarWRPorCarta(dadosFiltrados);
-    renderizarMatchups(dadosFiltrados);
-    renderizarHistorico(dadosFiltrados);
+    renderizarAbaAtiva();
 }
 
 function renderizarTudoSemHeader() {
-    renderizarGrafico(dadosFiltrados);
-    renderizarKPIs(dadosFiltrados);
-    renderizarDecks(dadosFiltrados);
-    renderizarHardCounters(dadosFiltrados);
-    renderizarSoftCounters(dadosFiltrados);
-    renderizarWRPorCarta(dadosFiltrados);
-    renderizarMatchups(dadosFiltrados);
-    renderizarHistorico(dadosFiltrados);
+    renderizarAbaAtiva();
 }
 
 // ============================================================
@@ -225,7 +263,9 @@ function getExternalTooltipHandler(dados) {
 }
 
 function renderizarGrafico(dados) {
-    const ctx = document.getElementById('meuGrafico').getContext('2d');
+    const ctx = document.getElementById('meuGrafico');
+    if (!ctx) return;
+    const context = ctx.getContext('2d');
     const labels = dados.map(d => formatarLabel(d.data));
     const trofeus = dados.map(d => d.trofeus);
     const cores = dados.map(d => {
@@ -234,7 +274,6 @@ function renderizarGrafico(dados) {
         return '#f87171';
     });
 
-    // Calcular min/max dinamico para o eixo Y com padding
     const minTrofeus = trofeus.length > 0 ? Math.min(...trofeus) : 0;
     const maxTrofeus = trofeus.length > 0 ? Math.max(...trofeus) : 100;
     const padding = Math.max(Math.round((maxTrofeus - minTrofeus) * 0.15), 20);
@@ -252,7 +291,7 @@ function renderizarGrafico(dados) {
         if (oldTooltip) oldTooltip.remove();
     }
 
-    meuGrafico = new Chart(ctx, {
+    meuGrafico = new Chart(context, {
         type: 'line',
         data: {
             labels: labels,
@@ -323,6 +362,7 @@ function renderizarKPIs(dados) {
 // ============================================================
 function renderizarDecks(dados) {
     const container = document.getElementById('deckAnalise');
+    if (!container) return;
     if (dados.length === 0) {
         container.innerHTML = '<p style="color:var(--text-muted)">Sem dados no periodo.</p>';
         return;
@@ -366,6 +406,7 @@ function renderizarDecks(dados) {
 // ============================================================
 function renderizarHardCounters(dados) {
     const container = document.getElementById('hardCounters');
+    if (!container) return;
     const derrotas = dados.filter(d => d.resultado === 'derrota');
 
     if (derrotas.length === 0) {
@@ -459,11 +500,10 @@ function renderizarWRPorCarta(dados) {
         });
     });
 
-    // Only cards that appeared 3+ times
     const cartas = Object.values(cartaStats)
         .filter(c => c.total >= 3)
         .map(c => ({ ...c, wr: (c.vitorias / c.total) * 100 }))
-        .sort((a, b) => a.wr - b.wr); // worst WR first
+        .sort((a, b) => a.wr - b.wr);
 
     if (cartas.length === 0) {
         container.innerHTML = '<p style="color:var(--text-muted)">Dados insuficientes (min. 3 aparicoes).</p>';
@@ -517,7 +557,6 @@ const ARQUETIPOS = {
 function detectarArquetipo(oponenteCartas) {
     if (!oponenteCartas || oponenteCartas.length === 0) return null;
     const nomes = oponenteCartas.map(c => c.nome);
-    // Priority order: first match wins
     for (const [winCon, info] of Object.entries(ARQUETIPOS)) {
         if (nomes.includes(winCon)) {
             const carta = oponenteCartas.find(c => c.nome === winCon);
@@ -593,12 +632,10 @@ function inicializarArenaSelect() {
         return;
     }
 
-    // Selecionar automaticamente a arena do jogador baseado nos trofeus atuais
     const trofeuAtual = dadosOriginais.length > 0 ? dadosOriginais[dadosOriginais.length - 1].trofeus : 0;
     const arenaJogador = dadosArenaGlobal.findIndex(a => trofeuAtual >= a.min_trofeus && trofeuAtual <= a.max_trofeus);
     let arenaSelecionada = arenaJogador;
 
-    // Se a arena do jogador nao tem dados, buscar a mais proxima com dados
     if (arenaSelecionada >= 0 && dadosArenaGlobal[arenaSelecionada].total_partidas === 0) {
         const comDados = dadosArenaGlobal
             .map((a, i) => ({ idx: i, partidas: a.total_partidas }))
@@ -614,7 +651,7 @@ function inicializarArenaSelect() {
         return `<option value="${idx}" ${idx === arenaSelecionada ? 'selected' : ''}>${arena.faixa} (${arena.total_partidas} partidas)</option>`;
     }).join('');
 
-    renderizarArenaGlobal();
+    if (abaAtiva === 'meta-global') renderizarArenaGlobal();
 }
 
 function renderizarArenaGlobal() {
@@ -635,19 +672,14 @@ function renderizarArenaGlobal() {
         return;
     }
 
-    // Calcular uso total para percentual
     const totalUsos = arena.cartas.reduce((acc, c) => acc + c.uso, 0);
-
-    // Top cartas mais usadas
     const topUsadas = arena.cartas.slice(0, 15);
 
-    // Top win rate (min 5 usos)
     const topWR = [...arena.cartas]
         .filter(c => c.uso >= 5)
         .sort((a, b) => b.winRate - a.winRate)
         .slice(0, 10);
 
-    // Piores win rates
     const pioresWR = [...arena.cartas]
         .filter(c => c.uso >= 5)
         .sort((a, b) => a.winRate - b.winRate)
@@ -718,12 +750,285 @@ function renderizarArenaGlobal() {
 }
 
 // ============================================================
+// 6. ANALISE DE NIVEL
+// ============================================================
+function calcularNivelMedio(cartas) {
+    if (!cartas || cartas.length === 0) return 0;
+    const soma = cartas.reduce((acc, c) => acc + (c.nivel || 0), 0);
+    return soma / cartas.length;
+}
+
+function renderizarAnaliseNivel(dados) {
+    if (dados.length === 0) {
+        document.getElementById('nivelDestaques').innerHTML = '<p style="color:var(--text-muted)">Sem dados no periodo.</p>';
+        return;
+    }
+
+    // Calcular nivel medio de cada partida
+    const partidasComNivel = dados
+        .filter(d => d.deck && d.deck.length > 0 && d.oponente_cartas && d.oponente_cartas.length > 0)
+        .map(d => {
+            const meuNivel = calcularNivelMedio(d.deck);
+            const opoNivel = calcularNivelMedio(d.oponente_cartas);
+            const diff = meuNivel - opoNivel;
+            return { ...d, meuNivel, opoNivel, diff };
+        });
+
+    if (partidasComNivel.length === 0) {
+        document.getElementById('nivelDestaques').innerHTML = '<p style="color:var(--text-muted)">Sem dados de nivel disponveis.</p>';
+        return;
+    }
+
+    // --- KPIs ---
+    const mediaMeuNivel = partidasComNivel.reduce((a, p) => a + p.meuNivel, 0) / partidasComNivel.length;
+    const mediaOpoNivel = partidasComNivel.reduce((a, p) => a + p.opoNivel, 0) / partidasComNivel.length;
+    const mediaDiff = mediaMeuNivel - mediaOpoNivel;
+
+    // Threshold para "nivelado": diferenca <= 0.5
+    const THRESHOLD = 0.5;
+    const emDesvantagem = partidasComNivel.filter(p => p.diff < -THRESHOLD);
+    const emVantagem = partidasComNivel.filter(p => p.diff > THRESHOLD);
+    const nivelados = partidasComNivel.filter(p => Math.abs(p.diff) <= THRESHOLD);
+
+    const pctDesv = ((emDesvantagem.length / partidasComNivel.length) * 100).toFixed(0);
+    const pctVant = ((emVantagem.length / partidasComNivel.length) * 100).toFixed(0);
+    const pctNiv = ((nivelados.length / partidasComNivel.length) * 100).toFixed(0);
+
+    animarNumero(document.getElementById('kpiSeuNivel'), parseFloat(mediaMeuNivel.toFixed(1)), 500);
+    animarNumero(document.getElementById('kpiOpoNivel'), parseFloat(mediaOpoNivel.toFixed(1)), 500);
+
+    const elDif = document.getElementById('kpiDifNivel');
+    if (elDif) {
+        const difStr = (mediaDiff >= 0 ? '+' : '') + mediaDiff.toFixed(1);
+        elDif.textContent = difStr;
+        elDif.style.color = mediaDiff >= 0 ? 'var(--win)' : 'var(--lose)';
+    }
+
+    const elDesv = document.getElementById('kpiDesv');
+    if (elDesv) animarNumero(elDesv, parseInt(pctDesv), 500, '%');
+
+    const elVant = document.getElementById('kpiVant');
+    if (elVant) animarNumero(elVant, parseInt(pctVant), 500, '%');
+
+    const elNiv = document.getElementById('kpiNivelado');
+    if (elNiv) animarNumero(elNiv, parseInt(pctNiv), 500, '%');
+
+    // --- Grafico de Barras: WR por Faixa de Diferenca ---
+    const faixas = [
+        { label: '-3 ou menos', min: -Infinity, max: -2.5 },
+        { label: '-2.5 a -1.1', min: -2.5, max: -0.5 },
+        { label: '-1.0 a -0.1', min: -0.5, max: 0 },
+        { label: '0.0 a +0.9', min: 0, max: 0.5 },
+        { label: '+1.0 a +2.0', min: 0.5, max: 2.5 },
+        { label: '+2.0 ou mais', min: 2.5, max: Infinity },
+    ];
+
+    const dadosFaixas = faixas.map(f => {
+        const partidas = partidasComNivel.filter(p => {
+            if (f.min === -Infinity) return p.diff <= f.max;
+            if (f.max === Infinity) return p.diff > f.min;
+            return p.diff > f.min && p.diff <= f.max;
+        });
+        const vitorias = partidas.filter(p => p.resultado === 'vitoria').length;
+        const wr = partidas.length > 0 ? (vitorias / partidas.length) * 100 : 0;
+        return { label: f.label, total: partidas.length, vitorias, wr };
+    });
+
+    const tema = document.documentElement.getAttribute('data-theme');
+    const tickColor = tema === 'light' ? '#6b7280' : '#888';
+    const gridColor = tema === 'light' ? '#e5e7eb' : '#ffffff10';
+
+    // Bar chart
+    const ctxNivel = document.getElementById('graficoNivel');
+    if (ctxNivel) {
+        if (graficoNivel) graficoNivel.destroy();
+
+        const barColors = dadosFaixas.map(f => {
+            if (f.wr >= 60) return '#4ade80';
+            if (f.wr >= 50) return '#86efac';
+            if (f.wr >= 40) return '#facc15';
+            return '#f87171';
+        });
+
+        graficoNivel = new Chart(ctxNivel.getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: dadosFaixas.map(f => f.label),
+                datasets: [{
+                    label: 'Win Rate %',
+                    data: dadosFaixas.map(f => f.wr),
+                    backgroundColor: barColors,
+                    borderRadius: 6,
+                    maxBarThickness: 60,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const f = dadosFaixas[ctx.dataIndex];
+                                return `WR: ${f.wr.toFixed(1)}% (${f.vitorias}V / ${f.total} partidas)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100,
+                        ticks: { color: tickColor, callback: v => v + '%' },
+                        grid: { color: gridColor }
+                    },
+                    x: {
+                        ticks: { color: tickColor, font: { size: 11 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    }
+
+    // --- Donuts ---
+    const donutColors = {
+        desv: '#f87171',
+        niv: '#facc15',
+        vant: '#4ade80',
+    };
+
+    // Donut 1: Distribuicao
+    const ctxDonut1 = document.getElementById('donutDistribuicao');
+    if (ctxDonut1) {
+        if (donutDistribuicao) donutDistribuicao.destroy();
+
+        donutDistribuicao = new Chart(ctxDonut1.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Desvantagem', 'Nivelado', 'Vantagem'],
+                datasets: [{
+                    data: [emDesvantagem.length, nivelados.length, emVantagem.length],
+                    backgroundColor: [donutColors.desv, donutColors.niv, donutColors.vant],
+                    borderWidth: 0,
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: tickColor, padding: 12, font: { size: 12 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const total = partidasComNivel.length;
+                                const val = ctx.raw;
+                                const pct = ((val / total) * 100).toFixed(0);
+                                return `${ctx.label}: ${val} partidas (${pct}%)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Donut 2: Win Rate por grupo
+    const wrDesv = emDesvantagem.length > 0
+        ? (emDesvantagem.filter(p => p.resultado === 'vitoria').length / emDesvantagem.length) * 100 : 0;
+    const wrNiv = nivelados.length > 0
+        ? (nivelados.filter(p => p.resultado === 'vitoria').length / nivelados.length) * 100 : 0;
+    const wrVant = emVantagem.length > 0
+        ? (emVantagem.filter(p => p.resultado === 'vitoria').length / emVantagem.length) * 100 : 0;
+
+    const ctxDonut2 = document.getElementById('donutWR');
+    if (ctxDonut2) {
+        if (donutWR) donutWR.destroy();
+
+        donutWR = new Chart(ctxDonut2.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    `Desvantagem (${wrDesv.toFixed(0)}%)`,
+                    `Nivelado (${wrNiv.toFixed(0)}%)`,
+                    `Vantagem (${wrVant.toFixed(0)}%)`
+                ],
+                datasets: [{
+                    data: [wrDesv, wrNiv, wrVant],
+                    backgroundColor: [donutColors.desv, donutColors.niv, donutColors.vant],
+                    borderWidth: 0,
+                }]
+            },
+            options: {
+                responsive: true,
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { color: tickColor, padding: 12, font: { size: 12 } }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const grupos = [emDesvantagem, nivelados, emVantagem];
+                                const grupo = grupos[ctx.dataIndex];
+                                const vit = grupo.filter(p => p.resultado === 'vitoria').length;
+                                return `WR: ${ctx.raw.toFixed(1)}% (${vit}V / ${grupo.length} partidas)`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // --- Destaques ---
+    const destaquesEl = document.getElementById('nivelDestaques');
+    if (destaquesEl) {
+        // Vitorias heroicas: vencer com diff <= -2
+        const vitHeroicas = partidasComNivel.filter(p => p.diff <= -2 && p.resultado === 'vitoria');
+        // Derrotas inesperadas: perder com diff >= +1
+        const derInesperadas = partidasComNivel.filter(p => p.diff >= 1 && p.resultado === 'derrota');
+
+        // Impacto estimado: se WR em desvantagem fosse igual ao nivelado
+        let trofeusPerdidos = 0;
+        if (emDesvantagem.length > 0 && wrNiv > wrDesv) {
+            const vitoriasExtras = Math.round(emDesvantagem.length * (wrNiv - wrDesv) / 100);
+            trofeusPerdidos = vitoriasExtras * 30; // ~30 trofeus por vitoria
+        }
+
+        destaquesEl.innerHTML = `
+            <div class="nivel-destaques-grid">
+                <div class="nivel-destaque-card">
+                    <div class="destaque-valor" style="color:var(--win)">${vitHeroicas.length}</div>
+                    <div class="destaque-label">Vitorias Heroicas</div>
+                    <div class="destaque-desc">Vitorias com nivel medio 2+ abaixo do oponente</div>
+                </div>
+                <div class="nivel-destaque-card">
+                    <div class="destaque-valor" style="color:var(--lose)">${derInesperadas.length}</div>
+                    <div class="destaque-label">Derrotas Inesperadas</div>
+                    <div class="destaque-desc">Derrotas com nivel medio 1+ acima do oponente</div>
+                </div>
+                <div class="nivel-destaque-card">
+                    <div class="destaque-valor" style="color:var(--accent)">~${trofeusPerdidos}</div>
+                    <div class="destaque-label">Trofeus Perdidos</div>
+                    <div class="destaque-desc">Estimativa de trofeus perdidos por desvantagem de nivel</div>
+                </div>
+            </div>
+        `;
+    }
+}
+
+// ============================================================
 // COUNTER TAB SWITCHING
 // ============================================================
 function alternarCounterTab(tipo) {
     const hardEl = document.getElementById('hardCounters');
     const softEl = document.getElementById('softCounters');
-    const tabs = document.querySelectorAll('.panel-tab');
+    const tabs = document.querySelectorAll('.panel-tabs .panel-tab');
 
     tabs.forEach(t => t.classList.remove('active'));
 
@@ -742,7 +1047,6 @@ function alternarCounterTab(tipo) {
 // 3.1 QUICK FILTERS
 // ============================================================
 function aplicarFiltroRapido(tipo) {
-    // Remove active from all
     document.querySelectorAll('.btn-filtro').forEach(b => b.classList.remove('ativo'));
 
     const agora = new Date();
@@ -768,11 +1072,9 @@ function aplicarFiltroRapido(tipo) {
             return;
     }
 
-    // Mark the button as active
     const btn = document.querySelector(`.btn-filtro[data-filtro="${tipo}"]`);
     if (btn) btn.classList.add('ativo');
 
-    // Clear the date picker
     if (picker) picker.clear();
 
     dadosFiltrados = dadosOriginais.filter(d => parseDateStr(d.data) >= inicio);
@@ -801,7 +1103,6 @@ function renderizarHistorico(dados) {
         return;
     }
 
-    // Sort
     let sorted = [...dados];
     sorted.sort((a, b) => {
         let va, vb;
@@ -871,7 +1172,6 @@ function renderizarHistorico(dados) {
     html += '</tbody></table></div>';
     container.innerHTML = html;
 
-    // Pagination
     const pagEl = document.getElementById('historicoPaginacao');
     if (totalPaginas <= 1) {
         pagEl.innerHTML = '';

@@ -19,7 +19,7 @@
             <button class="theme-toggle" id="themeToggle" onclick="toggleTema()" title="Alternar tema"></button>
         </div>
 
-        <!-- 1.1 Resumo do Dia -->
+        <!-- 1.1 Resumo do Dia (sempre visivel) -->
         <div class="header-stats">
             <div class="stat-card">
                 <div class="label">Trofeus Atuais</div>
@@ -36,9 +36,8 @@
             </div>
         </div>
 
-        <!-- 1.2 Grafico de Evolucao -->
-        <div class="panel">
-            <div class="panel-title">Evolucao de Trofeus</div>
+        <!-- Filtro de Periodo (sempre visivel) -->
+        <div class="panel filtro-panel">
             <div class="filtro-container">
                 <label>Periodo:</label>
                 <input type="text" id="rangePicker" placeholder="Selecione um intervalo...">
@@ -48,93 +47,181 @@
                 <button class="btn-filtro" data-filtro="30dias" onclick="aplicarFiltroRapido('30dias')">30 dias</button>
                 <button class="btn-filtro" data-filtro="mes" onclick="aplicarFiltroRapido('mes')">Este mes</button>
             </div>
-            <canvas id="meuGrafico"></canvas>
         </div>
 
-        <!-- 1.3 Painel de KPIs Dinamicos -->
-        <div class="panel">
-            <div class="panel-title">Indicadores do Periodo</div>
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-label">Partidas</div>
-                    <div class="kpi-value" id="kpiTotal">--</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Vitorias</div>
-                    <div class="kpi-value" id="kpiVitorias" style="color:var(--win)">--</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Derrotas</div>
-                    <div class="kpi-value" id="kpiDerrotas" style="color:var(--lose)">--</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Empates</div>
-                    <div class="kpi-value" id="kpiEmpates" style="color:var(--draw)">--</div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-label">Win Rate</div>
-                    <div class="kpi-value" id="kpiWinRate">--</div>
-                </div>
-            </div>
-        </div>
+        <!-- Navegacao por Abas -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="visao-geral" onclick="trocarAba('visao-geral')">Visao Geral</button>
+            <button class="tab-btn" data-tab="estrategia" onclick="trocarAba('estrategia')">Estrategia</button>
+            <button class="tab-btn" data-tab="nivel" onclick="trocarAba('nivel')">Analise de Nivel</button>
+            <button class="tab-btn" data-tab="meta-global" onclick="trocarAba('meta-global')">Meta Global</button>
+            <button class="tab-btn" data-tab="historico" onclick="trocarAba('historico')">Historico</button>
+        </nav>
 
-        <!-- 2. Inteligencia Estrategica -->
-        <!-- 2.1 Analisador de Deck -->
-        <div class="panel">
-            <div class="panel-title">Analise de Decks</div>
-            <div id="deckAnalise"></div>
-        </div>
-
-        <!-- Seção de Análise Estratégica Premium -->
-        <div class="intel-section">
-            <div class="intel-section-header">
-                <h2 class="intel-section-title">Inteligencia Estrategica</h2>
+        <!-- === ABA: Visao Geral === -->
+        <div class="tab-content active" id="tab-visao-geral">
+            <!-- Grafico de Evolucao -->
+            <div class="panel">
+                <div class="panel-title">Evolucao de Trofeus</div>
+                <canvas id="meuGrafico"></canvas>
             </div>
 
-            <div class="intel-grid-premium">
-                <!-- Counters (Hard + Soft em abas) -->
-                <div class="panel panel-premium">
-                    <div class="panel-tabs">
-                        <button class="panel-tab active" onclick="alternarCounterTab('hard')">Hard Counters</button>
-                        <button class="panel-tab" onclick="alternarCounterTab('soft')">Cartas Favoraveis</button>
+            <!-- Painel de KPIs Dinamicos -->
+            <div class="panel">
+                <div class="panel-title">Indicadores do Periodo</div>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Partidas</div>
+                        <div class="kpi-value" id="kpiTotal">--</div>
                     </div>
-                    <div class="counter-list" id="hardCounters"></div>
-                    <div class="counter-list" id="softCounters" style="display:none"></div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Vitorias</div>
+                        <div class="kpi-value" id="kpiVitorias" style="color:var(--win)">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Derrotas</div>
+                        <div class="kpi-value" id="kpiDerrotas" style="color:var(--lose)">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Empates</div>
+                        <div class="kpi-value" id="kpiEmpates" style="color:var(--draw)">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Win Rate</div>
+                        <div class="kpi-value" id="kpiWinRate">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === ABA: Estrategia === -->
+        <div class="tab-content" id="tab-estrategia">
+            <!-- Analisador de Deck -->
+            <div class="panel">
+                <div class="panel-title">Analise de Decks</div>
+                <div id="deckAnalise"></div>
+            </div>
+
+            <!-- Inteligencia Estrategica -->
+            <div class="intel-section">
+                <div class="intel-section-header">
+                    <h2 class="intel-section-title">Inteligencia Estrategica</h2>
                 </div>
 
-                <!-- Matchup por Arquetipo -->
+                <div class="intel-grid-premium">
+                    <!-- Counters (Hard + Soft em abas) -->
+                    <div class="panel panel-premium">
+                        <div class="panel-tabs">
+                            <button class="panel-tab active" onclick="alternarCounterTab('hard')">Hard Counters</button>
+                            <button class="panel-tab" onclick="alternarCounterTab('soft')">Cartas Favoraveis</button>
+                        </div>
+                        <div class="counter-list" id="hardCounters"></div>
+                        <div class="counter-list" id="softCounters" style="display:none"></div>
+                    </div>
+
+                    <!-- Matchup por Arquetipo -->
+                    <div class="panel panel-premium">
+                        <div class="panel-title">Matchup por Arquetipo</div>
+                        <div id="matchupAnalise"></div>
+                    </div>
+                </div>
+
+                <!-- Win Rate por Carta Adversaria -->
                 <div class="panel panel-premium">
-                    <div class="panel-title">Matchup por Arquetipo</div>
-                    <div id="matchupAnalise"></div>
+                    <div class="panel-title">Win Rate por Carta Adversaria</div>
+                    <div class="wr-card-list" id="wrPorCarta"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- === ABA: Analise de Nivel === -->
+        <div class="tab-content" id="tab-nivel">
+            <!-- KPIs de Nivel -->
+            <div class="panel">
+                <div class="panel-title">Comparacao de Nivel</div>
+                <div class="kpi-grid kpi-grid-nivel">
+                    <div class="kpi-card">
+                        <div class="kpi-label">Seu Nivel Medio</div>
+                        <div class="kpi-value" id="kpiSeuNivel">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Nivel Medio Oponentes</div>
+                        <div class="kpi-value" id="kpiOpoNivel">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Diferenca Media</div>
+                        <div class="kpi-value" id="kpiDifNivel">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Em Desvantagem</div>
+                        <div class="kpi-value" id="kpiDesv" style="color:var(--lose)">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Em Vantagem</div>
+                        <div class="kpi-value" id="kpiVant" style="color:var(--win)">--</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-label">Nivelado</div>
+                        <div class="kpi-value" id="kpiNivelado" style="color:var(--draw)">--</div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Win Rate por Carta Adversaria -->
-            <div class="panel panel-premium">
-                <div class="panel-title">Win Rate por Carta Adversaria</div>
-                <div class="wr-card-list" id="wrPorCarta"></div>
+            <!-- Grafico de WR por Faixa de Nivel -->
+            <div class="panel">
+                <div class="panel-title">Win Rate por Diferenca de Nivel</div>
+                <canvas id="graficoNivel"></canvas>
+            </div>
+
+            <!-- Distribuicao e Estatisticas -->
+            <div class="intel-grid-premium">
+                <!-- Donut de Distribuicao -->
+                <div class="panel">
+                    <div class="panel-title">Distribuicao de Partidas</div>
+                    <div class="donut-container">
+                        <canvas id="donutDistribuicao"></canvas>
+                    </div>
+                </div>
+
+                <!-- Donut de WR por Grupo -->
+                <div class="panel">
+                    <div class="panel-title">Win Rate por Grupo</div>
+                    <div class="donut-container">
+                        <canvas id="donutWR"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estatisticas Contextuais -->
+            <div class="panel">
+                <div class="panel-title">Destaques</div>
+                <div id="nivelDestaques"></div>
             </div>
         </div>
 
-        <!-- 4. Analise Global por Arena -->
-        <div class="panel">
-            <div class="panel-title">Meta Global por Arena</div>
-            <div class="arena-selector">
-                <label>Arena:</label>
-                <select id="arenaSelect" onchange="renderizarArenaGlobal()">
-                    <option value="">Carregando...</option>
-                </select>
-            </div>
-            <div id="arenaGlobalContent">
-                <p style="color:var(--text-muted)">Carregando dados globais...</p>
+        <!-- === ABA: Meta Global === -->
+        <div class="tab-content" id="tab-meta-global">
+            <div class="panel">
+                <div class="panel-title">Meta Global por Arena</div>
+                <div class="arena-selector">
+                    <label>Arena:</label>
+                    <select id="arenaSelect" onchange="renderizarArenaGlobal()">
+                        <option value="">Carregando...</option>
+                    </select>
+                </div>
+                <div id="arenaGlobalContent">
+                    <p style="color:var(--text-muted)">Carregando dados globais...</p>
+                </div>
             </div>
         </div>
 
-        <!-- 5. Historico de Partidas -->
-        <div class="panel">
-            <div class="panel-title">Historico de Partidas</div>
-            <div id="historicoTabela"></div>
-            <div class="paginacao" id="historicoPaginacao"></div>
+        <!-- === ABA: Historico === -->
+        <div class="tab-content" id="tab-historico">
+            <div class="panel">
+                <div class="panel-title">Historico de Partidas</div>
+                <div id="historicoTabela"></div>
+                <div class="paginacao" id="historicoPaginacao"></div>
+            </div>
         </div>
     </div>
 
