@@ -61,6 +61,14 @@ def atualizar_batalhas():
 
     gerar_dados_grafico(historico)
 
+def nivel_unificado(carta):
+    """Converte o nivel da API (por raridade) para o nivel unificado do jogo.
+    A API retorna level relativo ao maxLevel da raridade.
+    No jogo, todos os niveis sao exibidos numa escala unica ate 16 (common max)."""
+    level = carta.get('level', 0)
+    max_level = carta.get('maxLevel', 16)
+    return level + (16 - max_level)
+
 def gerar_dados_grafico(historico):
     # Tipos de batalha que sao ladder (possuem trofeus reais)
     TIPOS_LADDER = {'PvP', 'pathOfLegend'}
@@ -93,13 +101,13 @@ def gerar_dados_grafico(historico):
             deck = [{
                 "nome": c['name'],
                 "icone": c['iconUrls']['medium'],
-                "nivel": c.get('level', 0)
+                "nivel": nivel_unificado(c)
             } for c in cartas_jogador]
 
             oponente_cartas = [{
                 "nome": c['name'],
                 "icone": c['iconUrls']['medium'],
-                "nivel": c.get('level', 0)
+                "nivel": nivel_unificado(c)
             } for c in cartas_oponente]
 
             trophy_change = jogador.get('trophyChange')
