@@ -941,6 +941,34 @@ canvas {
     line-height: 1.4;
 }
 
+/* === Level Analysis Legend === */
+.nivel-legenda-panel {
+    padding: 14px 20px;
+}
+
+.nivel-legenda {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nivel-legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.nivel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
 /* === Skeleton Loading === */
 .skeleton {
     position: relative;

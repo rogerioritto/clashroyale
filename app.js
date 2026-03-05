@@ -813,42 +813,60 @@ function renderizarAnaliseNivel(dados) {
     const elNiv = document.getElementById('kpiNivelado');
     if (elNiv) animarNumero(elNiv, parseInt(pctNiv), 500, '%');
 
-    // --- Grafico de Barras: WR por Faixa de Diferenca ---
-    const faixas = [
-        { label: '-3 ou menos', min: -Infinity, max: -2.5 },
-        { label: '-2.5 a -1.1', min: -2.5, max: -0.5 },
-        { label: '-1.0 a -0.1', min: -0.5, max: 0 },
-        { label: '0.0 a +0.9', min: 0, max: 0.5 },
-        { label: '+1.0 a +2.0', min: 0.5, max: 2.5 },
-        { label: '+2.0 ou mais', min: 2.5, max: Infinity },
-    ];
+    // --- Grafico de Barras: WR por Faixa de Diferenca (0.5 em 0.5) ---
+    // Determinar range dinamico baseado nos dados
+    const minDiff = Math.min(...partidasComNivel.map(p => p.diff));
+    const maxDiff = Math.max(...partidasComNivel.map(p => p.diff));
+    const rangeStart = Math.floor(minDiff * 2) / 2; // arredondar para baixo em 0.5
+    const rangeEnd = Math.ceil(maxDiff * 2) / 2;    // arredondar para cima em 0.5
+
+    const faixas = [];
+    for (let v = rangeStart; v < rangeEnd; v += 0.5) {
+        const limInf = v;
+        const limSup = v + 0.5;
+        // Determinar zona: desvantagem (<-0.5), nivelado (-0.5 a +0.5), vantagem (>+0.5)
+        let zona;
+        if (limSup <= -THRESHOLD) zona = 'desvantagem';
+        else if (limInf >= THRESHOLD) zona = 'vantagem';
+        else zona = 'nivelado';
+
+        const labelInf = (limInf >= 0 ? '+' : '') + limInf.toFixed(1);
+        const labelSup = (limSup >= 0 ? '+' : '') + limSup.toFixed(1);
+
+        faixas.push({
+            label: `${labelInf} a ${labelSup}`,
+            min: limInf,
+            max: limSup,
+            zona
+        });
+    }
 
     const dadosFaixas = faixas.map(f => {
-        const partidas = partidasComNivel.filter(p => {
-            if (f.min === -Infinity) return p.diff <= f.max;
-            if (f.max === Infinity) return p.diff > f.min;
-            return p.diff > f.min && p.diff <= f.max;
-        });
+        const partidas = partidasComNivel.filter(p => p.diff > f.min && p.diff <= f.max);
+        // Incluir diff == min na primeira faixa
+        if (f === faixas[0]) {
+            const iguais = partidasComNivel.filter(p => p.diff === f.min);
+            iguais.forEach(p => { if (!partidas.includes(p)) partidas.push(p); });
+        }
         const vitorias = partidas.filter(p => p.resultado === 'vitoria').length;
         const wr = partidas.length > 0 ? (vitorias / partidas.length) * 100 : 0;
-        return { label: f.label, total: partidas.length, vitorias, wr };
+        return { label: f.label, total: partidas.length, vitorias, wr, zona: f.zona };
     });
 
     const tema = document.documentElement.getAttribute('data-theme');
     const tickColor = tema === 'light' ? '#6b7280' : '#888';
     const gridColor = tema === 'light' ? '#e5e7eb' : '#ffffff10';
 
+    const zonaColors = {
+        desvantagem: '#f87171',
+        nivelado: '#facc15',
+        vantagem: '#4ade80',
+    };
+
     // Bar chart
     const ctxNivel = document.getElementById('graficoNivel');
     if (ctxNivel) {
         if (graficoNivel) graficoNivel.destroy();
-
-        const barColors = dadosFaixas.map(f => {
-            if (f.wr >= 60) return '#4ade80';
-            if (f.wr >= 50) return '#86efac';
-            if (f.wr >= 40) return '#facc15';
-            return '#f87171';
-        });
 
         graficoNivel = new Chart(ctxNivel.getContext('2d'), {
             type: 'bar',
@@ -857,9 +875,9 @@ function renderizarAnaliseNivel(dados) {
                 datasets: [{
                     label: 'Win Rate %',
                     data: dadosFaixas.map(f => f.wr),
-                    backgroundColor: barColors,
+                    backgroundColor: dadosFaixas.map(f => zonaColors[f.zona]),
                     borderRadius: 6,
-                    maxBarThickness: 60,
+                    maxBarThickness: 50,
                 }]
             },
             options: {
@@ -883,7 +901,7 @@ function renderizarAnaliseNivel(dados) {
                         grid: { color: gridColor }
                     },
                     x: {
-                        ticks: { color: tickColor, font: { size: 11 } },
+                        ticks: { color: tickColor, font: { size: 10 } },
                         grid: { display: false }
                     }
                 }
