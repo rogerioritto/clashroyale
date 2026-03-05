@@ -92,12 +92,14 @@ def gerar_dados_grafico(historico):
 
             deck = [{
                 "nome": c['name'],
-                "icone": c['iconUrls']['medium']
+                "icone": c['iconUrls']['medium'],
+                "nivel": c.get('level', 0)
             } for c in cartas_jogador]
 
             oponente_cartas = [{
                 "nome": c['name'],
-                "icone": c['iconUrls']['medium']
+                "icone": c['iconUrls']['medium'],
+                "nivel": c.get('level', 0)
             } for c in cartas_oponente]
 
             trophy_change = jogador.get('trophyChange')
