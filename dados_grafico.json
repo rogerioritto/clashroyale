@@ -18016,5 +18016,642 @@
                 "nivel": 13
             }
         ]
+    },
+    {
+        "data": "20260404 152049",
+        "trofeus": 8294,
+        "resultado": "derrota",
+        "crowns_jogador": 0,
+        "crowns_oponente": 1,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Witch",
+                "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Mini P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Little Prince",
+                "icone": "https://api-assets.clashroyale.com/cards/300/dY-gSseki6KBpkIG17safHH5YlB8SErFZO9OXbJxf9w.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Arrows",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
+                "nivel": 12
+            },
+            {
+                "nome": "P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Magic Archer",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+                "nivel": 13
+            },
+            {
+                "nome": "The Log",
+                "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Valkyrie",
+                "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+                "nivel": 12
+            }
+        ]
+    },
+    {
+        "data": "20260404 152412",
+        "trofeus": 8267,
+        "resultado": "derrota",
+        "crowns_jogador": 0,
+        "crowns_oponente": 1,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Valkyrie",
+                "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Mini P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Tesla",
+                "icone": "https://api-assets.clashroyale.com/cards/300/OiwnGrxFMNiHetYEerE-UZt0L_uYNzFY7qV_CA_OxR4.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Goblin Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Hog Rider",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Princess",
+                "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Goblin Gang",
+                "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Zap",
+                "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+                "nivel": 13
+            }
+        ]
+    },
+    {
+        "data": "20260404 152725",
+        "trofeus": 8295,
+        "resultado": "vitoria",
+        "crowns_jogador": 1,
+        "crowns_oponente": 0,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Witch",
+                "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Magic Archer",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Golden Knight",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Princess",
+                "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Mega Knight",
+                "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Archers",
+                "icone": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lumberjack",
+                "icone": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
+                "nivel": 12
+            },
+            {
+                "nome": "The Log",
+                "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+                "nivel": 11
+            }
+        ]
+    },
+    {
+        "data": "20260404 153452",
+        "trofeus": 8323,
+        "resultado": "vitoria",
+        "crowns_jogador": 1,
+        "crowns_oponente": 0,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Miner",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Y4yWvdwBCg2FpAZgs8T09Gy34WOwpLZW-ttL52Ae8NE.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Mini P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hog Rider",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Valkyrie",
+                "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Ice Wizard",
+                "icone": "https://api-assets.clashroyale.com/cards/300/W3dkw0HTw9n1jB-zbknY2w3wHuyuLxSRIAV5fUT1SEY.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Electro Wizard",
+                "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Baby Dragon",
+                "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Skeleton Army",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
+                "nivel": 14
+            }
+        ]
+    },
+    {
+        "data": "20260404 153843",
+        "trofeus": 8349,
+        "resultado": "vitoria",
+        "crowns_jogador": 1,
+        "crowns_oponente": 0,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Witch",
+                "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Magic Archer",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Furnace",
+                "icone": "https://api-assets.clashroyale.com/cards/300/iqbDiG7yYRIzvCPXdt9zPb3IvMt7F7Gi4wIPnh2x4aI.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Valkyrie",
+                "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Bowler",
+                "icone": "https://api-assets.clashroyale.com/cards/300/SU4qFXmbQXWjvASxVI6z9IJuTYolx4A0MKK90sTIE88.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Tombstone",
+                "icone": "https://api-assets.clashroyale.com/cards/300/LjSfSbwQfkZuRJY4pVxKspZ-a0iM5KAhU8w-a_N5Z7Y.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Arrows",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Hog Rider",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+                "nivel": 12
+            }
+        ]
+    },
+    {
+        "data": "20260404 154922",
+        "trofeus": 8317,
+        "resultado": "derrota",
+        "crowns_jogador": 1,
+        "crowns_oponente": 3,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
+                "nivel": 15
+            },
+            {
+                "nome": "Magic Archer",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Executioner",
+                "icone": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Mini P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+                "nivel": 14
+            },
+            {
+                "nome": "The Log",
+                "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+                "nivel": 9
+            },
+            {
+                "nome": "Hog Rider",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Knight",
+                "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
+                "nivel": 15
+            },
+            {
+                "nome": "Cannon",
+                "icone": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
+                "nivel": 10
+            }
+        ]
+    },
+    {
+        "data": "20260404 155232",
+        "trofeus": 8347,
+        "resultado": "vitoria",
+        "crowns_jogador": 1,
+        "crowns_oponente": 0,
+        "deck": [
+            {
+                "nome": "Royal Ghost",
+                "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Barbarian Barrel",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Hunter",
+                "icone": "https://api-assets.clashroyale.com/cards/300/VNabB1WKnYtYRSG7X_FZfnZjQDHTBs9A96OGMFmecrA.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Royal Giant",
+                "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Fisherman",
+                "icone": "https://api-assets.clashroyale.com/cards/300/U2KZ3g0wyufcuA5P2Xrn3Z3lr1WiJmc5S0IWOZHgizQ.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Skeletons",
+                "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Electro Spirit",
+                "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Lightning",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+                "nivel": 12
+            }
+        ],
+        "oponente_cartas": [
+            {
+                "nome": "Goblin Cage",
+                "icone": "https://api-assets.clashroyale.com/cards/300/vD24bBgK4rSq7wx5QEbuqChtPMRFviL_ep76GwQw1yA.png",
+                "nivel": 11
+            },
+            {
+                "nome": "Mini P.E.K.K.A",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Skeleton Army",
+                "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Princess",
+                "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Giant Snowball",
+                "icone": "https://api-assets.clashroyale.com/cards/300/7MaJLa6hK9WN2_VIshuh5DIDfGwm0wEv98gXtAxLDPs.png",
+                "nivel": 13
+            },
+            {
+                "nome": "Dart Goblin",
+                "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
+                "nivel": 12
+            },
+            {
+                "nome": "Baby Dragon",
+                "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
+                "nivel": 14
+            },
+            {
+                "nome": "Wizard",
+                "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
+                "nivel": 12
+            }
+        ]
     }
 ]
