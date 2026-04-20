@@ -3,133 +3,35 @@
     "faixa": "Arena 15 (Legendary)",
     "min_trofeus": 5000,
     "max_trofeus": 5499,
-    "total_partidas": 266,
+    "total_partidas": 114,
     "cartas": [
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 139,
-        "vitorias": 86,
-        "winRate": 61.9
-      },
-      {
-        "nome": "Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
-        "uso": 121,
-        "vitorias": 81,
-        "winRate": 66.9
-      },
-      {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 94,
-        "vitorias": 58,
-        "winRate": 61.7
-      },
-      {
-        "nome": "Giant",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Axr4ox5_b7edmLsoHxBX3vmgijAIibuF6RImTbqLlXE.png",
-        "uso": 92,
-        "vitorias": 59,
-        "winRate": 64.1
-      },
-      {
-        "nome": "Spear Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/FSDFotjaXidI4ku_WFpVCTWS1hKGnFh1sxX0lxM43_E.png",
-        "uso": 88,
-        "vitorias": 57,
-        "winRate": 64.8
-      },
-      {
-        "nome": "Fire Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png",
-        "uso": 86,
-        "vitorias": 55,
-        "winRate": 64.0
-      },
-      {
-        "nome": "Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
-        "uso": 86,
-        "vitorias": 54,
-        "winRate": 62.8
-      },
-      {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 82,
-        "vitorias": 54,
-        "winRate": 65.9
-      },
-      {
-        "nome": "Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 78,
-        "vitorias": 41,
-        "winRate": 52.6
-      },
-      {
-        "nome": "Skeleton Army",
-        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 74,
-        "vitorias": 38,
-        "winRate": 51.4
-      },
       {
         "nome": "Mini P.E.K.K.A",
         "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 63,
-        "vitorias": 23,
-        "winRate": 36.5
+        "uso": 67,
+        "vitorias": 36,
+        "winRate": 53.7
       },
       {
         "nome": "Mega Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 46,
-        "vitorias": 17,
-        "winRate": 37.0
+        "uso": 58,
+        "vitorias": 36,
+        "winRate": 62.1
       },
       {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 44,
-        "vitorias": 11,
-        "winRate": 25.0
+        "nome": "Skeleton Army",
+        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
+        "uso": 48,
+        "vitorias": 26,
+        "winRate": 54.2
       },
       {
-        "nome": "The Log",
-        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 41,
-        "vitorias": 20,
-        "winRate": 48.8
-      },
-      {
-        "nome": "Fireball",
-        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 41,
-        "vitorias": 29,
-        "winRate": 70.7
-      },
-      {
-        "nome": "Dark Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/M7fXlrKXHu2IvpSGpk36kXVstslbR08Bbxcy0jQcln8.png",
-        "uso": 39,
-        "vitorias": 27,
-        "winRate": 69.2
-      },
-      {
-        "nome": "Goblin Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 38,
-        "vitorias": 15,
-        "winRate": 39.5
-      },
-      {
-        "nome": "Magic Archer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
-        "uso": 38,
-        "vitorias": 14,
-        "winRate": 36.8
+        "nome": "Executioner",
+        "icone": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
+        "uso": 34,
+        "vitorias": 18,
+        "winRate": 52.9
       },
       {
         "nome": "Electro Wizard",
@@ -139,80 +41,178 @@
         "winRate": 61.8
       },
       {
-        "nome": "Barbarian Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+        "nome": "Goblin Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
         "uso": 30,
-        "vitorias": 13,
-        "winRate": 43.3
+        "vitorias": 17,
+        "winRate": 56.7
+      },
+      {
+        "nome": "Bats",
+        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
+        "uso": 27,
+        "vitorias": 16,
+        "winRate": 59.3
+      },
+      {
+        "nome": "The Log",
+        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+        "uso": 27,
+        "vitorias": 15,
+        "winRate": 55.6
+      },
+      {
+        "nome": "Witch",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+        "uso": 26,
+        "vitorias": 7,
+        "winRate": 26.9
+      },
+      {
+        "nome": "Fireball",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
+        "uso": 25,
+        "vitorias": 14,
+        "winRate": 56.0
+      },
+      {
+        "nome": "Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
+        "uso": 22,
+        "vitorias": 10,
+        "winRate": 45.5
       },
       {
         "nome": "Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 29,
-        "vitorias": 11,
-        "winRate": 37.9
-      },
-      {
-        "nome": "Royal Giant",
-        "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
-        "uso": 28,
-        "vitorias": 21,
-        "winRate": 75.0
+        "uso": 22,
+        "vitorias": 13,
+        "winRate": 59.1
       },
       {
         "nome": "Arrows",
         "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 27,
-        "vitorias": 9,
-        "winRate": 33.3
-      },
-      {
-        "nome": "Minions",
-        "icone": "https://api-assets.clashroyale.com/cards/300/yHGpoEnmUWPGV_hBbhn-Kk-Bs838OjGzWzJJlQpQKQA.png",
-        "uso": 24,
-        "vitorias": 9,
-        "winRate": 37.5
-      },
-      {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 21,
-        "vitorias": 10,
-        "winRate": 47.6
-      },
-      {
-        "nome": "Zap",
-        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
-        "uso": 20,
-        "vitorias": 6,
-        "winRate": 30.0
-      },
-      {
-        "nome": "Archers",
-        "icone": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png",
-        "uso": 20,
-        "vitorias": 3,
-        "winRate": 15.0
-      },
-      {
-        "nome": "Musketeer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Tex1C48UTq9FKtAX-3tzG0FJmc9jzncUZG3bb5Vf-Ds.png",
-        "uso": 19,
-        "vitorias": 4,
-        "winRate": 21.1
-      },
-      {
-        "nome": "Baby Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
         "uso": 19,
         "vitorias": 10,
         "winRate": 52.6
       },
       {
-        "nome": "Royal Delivery",
-        "icone": "https://api-assets.clashroyale.com/cards/300/LPg7AGjGI3_xmi7gLLgGC50yKM1jJ2teWkZfoHJcIZo.png",
+        "nome": "P.E.K.K.A",
+        "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
+        "uso": 19,
+        "vitorias": 10,
+        "winRate": 52.6
+      },
+      {
+        "nome": "Wall Breakers",
+        "icone": "https://api-assets.clashroyale.com/cards/300/_xPphEfC8eEwFNrfU3cMQG9-f5JaLQ31ARCA7l3XtW4.png",
         "uso": 18,
+        "vitorias": 10,
+        "winRate": 55.6
+      },
+      {
+        "nome": "Mirror",
+        "icone": "https://api-assets.clashroyale.com/cards/300/wC6Cm9rKLEOk72zTsukVwxewKIoO4ZcMJun54zCPWvA.png",
+        "uso": 17,
         "vitorias": 8,
+        "winRate": 47.1
+      },
+      {
+        "nome": "Inferno Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
+        "uso": 17,
+        "vitorias": 11,
+        "winRate": 64.7
+      },
+      {
+        "nome": "Musketeer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Tex1C48UTq9FKtAX-3tzG0FJmc9jzncUZG3bb5Vf-Ds.png",
+        "uso": 17,
+        "vitorias": 10,
+        "winRate": 58.8
+      },
+      {
+        "nome": "Mega Minion",
+        "icone": "https://api-assets.clashroyale.com/cards/300/-T_e4YLbuhPBKbYnBwQfXgynNpp5eOIN_0RracYwL9c.png",
+        "uso": 16,
+        "vitorias": 9,
+        "winRate": 56.2
+      },
+      {
+        "nome": "Zap",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+        "uso": 16,
+        "vitorias": 7,
+        "winRate": 43.8
+      },
+      {
+        "nome": "Elixir Golem",
+        "icone": "https://api-assets.clashroyale.com/cards/300/puhMsZjCIqy21HW3hYxjrk_xt8NIPyFqjRy-BeLKZwo.png",
+        "uso": 16,
+        "vitorias": 9,
+        "winRate": 56.2
+      },
+      {
+        "nome": "Magic Archer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+        "uso": 15,
+        "vitorias": 8,
+        "winRate": 53.3
+      },
+      {
+        "nome": "Valkyrie",
+        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+        "uso": 14,
+        "vitorias": 1,
+        "winRate": 7.1
+      },
+      {
+        "nome": "Bandit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/QWDdXMKJNpv0go-HYaWQWP6p8uIOHjqn-zX7G0p3DyM.png",
+        "uso": 14,
+        "vitorias": 11,
+        "winRate": 78.6
+      },
+      {
+        "nome": "Elite Barbarians",
+        "icone": "https://api-assets.clashroyale.com/cards/300/C88C5JH_F3lLZj6K-tLcMo5DPjrFmvzIb1R2M6xCfTE.png",
+        "uso": 13,
+        "vitorias": 8,
+        "winRate": 61.5
+      },
+      {
+        "nome": "Baby Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
+        "uso": 13,
+        "vitorias": 4,
+        "winRate": 30.8
+      },
+      {
+        "nome": "Goblin Gang",
+        "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+        "uso": 13,
+        "vitorias": 10,
+        "winRate": 76.9
+      },
+      {
+        "nome": "Lumberjack",
+        "icone": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
+        "uso": 12,
+        "vitorias": 9,
+        "winRate": 75.0
+      },
+      {
+        "nome": "Barbarian Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+        "uso": 11,
+        "vitorias": 4,
+        "winRate": 36.4
+      },
+      {
+        "nome": "Archers",
+        "icone": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png",
+        "uso": 9,
+        "vitorias": 4,
         "winRate": 44.4
       }
     ]
@@ -221,217 +221,217 @@
     "faixa": "Arena 16 (Champion)",
     "min_trofeus": 5500,
     "max_trofeus": 5999,
-    "total_partidas": 605,
+    "total_partidas": 124,
     "cartas": [
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 318,
-        "vitorias": 175,
-        "winRate": 55.0
-      },
-      {
-        "nome": "Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
-        "uso": 277,
-        "vitorias": 158,
-        "winRate": 57.0
-      },
-      {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 273,
-        "vitorias": 149,
-        "winRate": 54.6
-      },
-      {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 267,
-        "vitorias": 149,
-        "winRate": 55.8
-      },
-      {
-        "nome": "Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
-        "uso": 266,
-        "vitorias": 150,
-        "winRate": 56.4
-      },
-      {
-        "nome": "Giant",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Axr4ox5_b7edmLsoHxBX3vmgijAIibuF6RImTbqLlXE.png",
-        "uso": 266,
-        "vitorias": 147,
-        "winRate": 55.3
-      },
-      {
-        "nome": "Spear Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/FSDFotjaXidI4ku_WFpVCTWS1hKGnFh1sxX0lxM43_E.png",
-        "uso": 264,
-        "vitorias": 147,
-        "winRate": 55.7
-      },
-      {
-        "nome": "Fire Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png",
-        "uso": 254,
-        "vitorias": 144,
-        "winRate": 56.7
-      },
-      {
-        "nome": "Skeleton Army",
-        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 143,
-        "vitorias": 80,
-        "winRate": 55.9
-      },
       {
         "nome": "Witch",
         "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 138,
-        "vitorias": 67,
-        "winRate": 48.6
+        "uso": 54,
+        "vitorias": 29,
+        "winRate": 53.7
       },
       {
         "nome": "Mini P.E.K.K.A",
         "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 130,
-        "vitorias": 63,
-        "winRate": 48.5
-      },
-      {
-        "nome": "Mega Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 93,
-        "vitorias": 42,
-        "winRate": 45.2
-      },
-      {
-        "nome": "Magic Archer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
-        "uso": 85,
-        "vitorias": 40,
-        "winRate": 47.1
-      },
-      {
-        "nome": "Barbarian Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
-        "uso": 82,
-        "vitorias": 37,
-        "winRate": 45.1
+        "uso": 54,
+        "vitorias": 30,
+        "winRate": 55.6
       },
       {
         "nome": "The Log",
         "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 78,
-        "vitorias": 43,
-        "winRate": 55.1
-      },
-      {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 77,
-        "vitorias": 28,
-        "winRate": 36.4
+        "uso": 53,
+        "vitorias": 27,
+        "winRate": 50.9
       },
       {
         "nome": "Goblin Barrel",
         "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 74,
-        "vitorias": 38,
-        "winRate": 51.4
+        "uso": 53,
+        "vitorias": 25,
+        "winRate": 47.2
       },
       {
-        "nome": "Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 68,
-        "vitorias": 26,
-        "winRate": 38.2
-      },
-      {
-        "nome": "Baby Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
-        "uso": 67,
+        "nome": "Goblin Gang",
+        "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+        "uso": 50,
         "vitorias": 36,
-        "winRate": 53.7
+        "winRate": 72.0
+      },
+      {
+        "nome": "Skeleton Army",
+        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
+        "uso": 49,
+        "vitorias": 27,
+        "winRate": 55.1
+      },
+      {
+        "nome": "Magic Archer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+        "uso": 44,
+        "vitorias": 25,
+        "winRate": 56.8
       },
       {
         "nome": "Arrows",
         "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 61,
-        "vitorias": 28,
-        "winRate": 45.9
-      },
-      {
-        "nome": "Inferno Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
-        "uso": 46,
-        "vitorias": 18,
-        "winRate": 39.1
-      },
-      {
-        "nome": "Balloon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/qBipxLo-3hhCnPrApp2Nn3b2NgrSrvwzWytvREev0CY.png",
-        "uso": 45,
-        "vitorias": 19,
-        "winRate": 42.2
-      },
-      {
-        "nome": "Dart Goblin",
-        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
-        "uso": 42,
-        "vitorias": 22,
-        "winRate": 52.4
+        "uso": 33,
+        "vitorias": 21,
+        "winRate": 63.6
       },
       {
         "nome": "Electro Wizard",
         "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
-        "uso": 41,
+        "uso": 31,
         "vitorias": 23,
-        "winRate": 56.1
+        "winRate": 74.2
+      },
+      {
+        "nome": "Mega Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
+        "uso": 31,
+        "vitorias": 17,
+        "winRate": 54.8
       },
       {
         "nome": "Golden Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
-        "uso": 39,
-        "vitorias": 16,
-        "winRate": 41.0
-      },
-      {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 39,
-        "vitorias": 17,
-        "winRate": 43.6
+        "uso": 29,
+        "vitorias": 19,
+        "winRate": 65.5
       },
       {
         "nome": "Fireball",
         "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 37,
-        "vitorias": 17,
-        "winRate": 45.9
-      },
-      {
-        "nome": "P.E.K.K.A",
-        "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
-        "uso": 37,
-        "vitorias": 24,
-        "winRate": 64.9
-      },
-      {
-        "nome": "Musketeer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Tex1C48UTq9FKtAX-3tzG0FJmc9jzncUZG3bb5Vf-Ds.png",
-        "uso": 35,
-        "vitorias": 19,
-        "winRate": 54.3
-      },
-      {
-        "nome": "Royal Ghost",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
-        "uso": 35,
+        "uso": 25,
         "vitorias": 12,
-        "winRate": 34.3
+        "winRate": 48.0
+      },
+      {
+        "nome": "Inferno Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
+        "uso": 24,
+        "vitorias": 18,
+        "winRate": 75.0
+      },
+      {
+        "nome": "Skeletons",
+        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+        "uso": 24,
+        "vitorias": 11,
+        "winRate": 45.8
+      },
+      {
+        "nome": "Bandit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/QWDdXMKJNpv0go-HYaWQWP6p8uIOHjqn-zX7G0p3DyM.png",
+        "uso": 23,
+        "vitorias": 18,
+        "winRate": 78.3
+      },
+      {
+        "nome": "Lumberjack",
+        "icone": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
+        "uso": 23,
+        "vitorias": 18,
+        "winRate": 78.3
+      },
+      {
+        "nome": "Hog Rider",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+        "uso": 21,
+        "vitorias": 8,
+        "winRate": 38.1
+      },
+      {
+        "nome": "Graveyard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Icp8BIyyfBTj1ncCJS7mb82SY7TPV-MAE-J2L2R48DI.png",
+        "uso": 19,
+        "vitorias": 17,
+        "winRate": 89.5
+      },
+      {
+        "nome": "Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
+        "uso": 18,
+        "vitorias": 6,
+        "winRate": 33.3
+      },
+      {
+        "nome": "Valkyrie",
+        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+        "uso": 17,
+        "vitorias": 2,
+        "winRate": 11.8
+      },
+      {
+        "nome": "Bats",
+        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
+        "uso": 16,
+        "vitorias": 6,
+        "winRate": 37.5
+      },
+      {
+        "nome": "Zap",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+        "uso": 15,
+        "vitorias": 7,
+        "winRate": 46.7
+      },
+      {
+        "nome": "Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
+        "uso": 15,
+        "vitorias": 4,
+        "winRate": 26.7
+      },
+      {
+        "nome": "Miner",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Y4yWvdwBCg2FpAZgs8T09Gy34WOwpLZW-ttL52Ae8NE.png",
+        "uso": 14,
+        "vitorias": 11,
+        "winRate": 78.6
+      },
+      {
+        "nome": "Ice Spirit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
+        "uso": 14,
+        "vitorias": 4,
+        "winRate": 28.6
+      },
+      {
+        "nome": "Executioner",
+        "icone": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
+        "uso": 12,
+        "vitorias": 7,
+        "winRate": 58.3
+      },
+      {
+        "nome": "Dart Goblin",
+        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
+        "uso": 12,
+        "vitorias": 7,
+        "winRate": 58.3
+      },
+      {
+        "nome": "Cannon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
+        "uso": 11,
+        "vitorias": 0,
+        "winRate": 0.0
+      },
+      {
+        "nome": "Mirror",
+        "icone": "https://api-assets.clashroyale.com/cards/300/wC6Cm9rKLEOk72zTsukVwxewKIoO4ZcMJun54zCPWvA.png",
+        "uso": 11,
+        "vitorias": 6,
+        "winRate": 54.5
+      },
+      {
+        "nome": "Skeleton King",
+        "icone": "https://api-assets.clashroyale.com/cards/300/dCd69_wN9f8DxwuqOGtR4QgWhHIPIaTNxZ1e23RzAAc.png",
+        "uso": 10,
+        "vitorias": 4,
+        "winRate": 40.0
       }
     ]
   },
@@ -439,217 +439,84 @@
     "faixa": "Arena 17 (Grand Champion)",
     "min_trofeus": 6000,
     "max_trofeus": 6499,
-    "total_partidas": 481,
+    "total_partidas": 9,
     "cartas": [
-      {
-        "nome": "Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
-        "uso": 202,
-        "vitorias": 105,
-        "winRate": 52.0
-      },
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 198,
-        "vitorias": 103,
-        "winRate": 52.0
-      },
-      {
-        "nome": "Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
-        "uso": 194,
-        "vitorias": 96,
-        "winRate": 49.5
-      },
-      {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 171,
-        "vitorias": 85,
-        "winRate": 49.7
-      },
-      {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 162,
-        "vitorias": 83,
-        "winRate": 51.2
-      },
-      {
-        "nome": "Spear Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/FSDFotjaXidI4ku_WFpVCTWS1hKGnFh1sxX0lxM43_E.png",
-        "uso": 158,
-        "vitorias": 80,
-        "winRate": 50.6
-      },
-      {
-        "nome": "Fire Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png",
-        "uso": 157,
-        "vitorias": 81,
-        "winRate": 51.6
-      },
-      {
-        "nome": "Giant",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Axr4ox5_b7edmLsoHxBX3vmgijAIibuF6RImTbqLlXE.png",
-        "uso": 156,
-        "vitorias": 80,
-        "winRate": 51.3
-      },
       {
         "nome": "Witch",
         "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 144,
-        "vitorias": 76,
-        "winRate": 52.8
-      },
-      {
-        "nome": "Goblin Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 134,
-        "vitorias": 72,
-        "winRate": 53.7
-      },
-      {
-        "nome": "Mini P.E.K.K.A",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 118,
-        "vitorias": 67,
-        "winRate": 56.8
-      },
-      {
-        "nome": "Skeleton Army",
-        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 90,
-        "vitorias": 60,
-        "winRate": 66.7
-      },
-      {
-        "nome": "Mega Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 87,
-        "vitorias": 51,
-        "winRate": 58.6
-      },
-      {
-        "nome": "Magic Archer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
-        "uso": 82,
-        "vitorias": 39,
-        "winRate": 47.6
+        "uso": 7,
+        "vitorias": 3,
+        "winRate": 42.9
       },
       {
         "nome": "Golden Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
-        "uso": 80,
-        "vitorias": 39,
-        "winRate": 48.8
+        "uso": 7,
+        "vitorias": 3,
+        "winRate": 42.9
+      },
+      {
+        "nome": "Mini P.E.K.K.A",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+        "uso": 6,
+        "vitorias": 4,
+        "winRate": 66.7
       },
       {
         "nome": "The Log",
         "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 62,
-        "vitorias": 32,
-        "winRate": 51.6
+        "uso": 5,
+        "vitorias": 2,
+        "winRate": 40.0
       },
       {
-        "nome": "Royal Ghost",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3En2cz0ISQAaMTHY3hj3rTveFN2kJYq-H4VxvdJNvCM.png",
-        "uso": 61,
-        "vitorias": 28,
-        "winRate": 45.9
+        "nome": "Goblin Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
+        "uso": 5,
+        "vitorias": 2,
+        "winRate": 40.0
       },
       {
-        "nome": "Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 55,
-        "vitorias": 27,
-        "winRate": 49.1
-      },
-      {
-        "nome": "Archers",
-        "icone": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png",
-        "uso": 50,
-        "vitorias": 27,
-        "winRate": 54.0
-      },
-      {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 48,
-        "vitorias": 24,
+        "nome": "Goblin Gang",
+        "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+        "uso": 4,
+        "vitorias": 2,
         "winRate": 50.0
       },
       {
-        "nome": "Wall Breakers",
-        "icone": "https://api-assets.clashroyale.com/cards/300/_xPphEfC8eEwFNrfU3cMQG9-f5JaLQ31ARCA7l3XtW4.png",
-        "uso": 47,
-        "vitorias": 20,
-        "winRate": 42.6
+        "nome": "Magic Archer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
       },
       {
-        "nome": "Goblin Cage",
-        "icone": "https://api-assets.clashroyale.com/cards/300/vD24bBgK4rSq7wx5QEbuqChtPMRFviL_ep76GwQw1yA.png",
-        "uso": 46,
-        "vitorias": 18,
-        "winRate": 39.1
+        "nome": "Miner",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Y4yWvdwBCg2FpAZgs8T09Gy34WOwpLZW-ttL52Ae8NE.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
       },
       {
-        "nome": "Arrows",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 44,
-        "vitorias": 11,
-        "winRate": 25.0
+        "nome": "Royal Hogs",
+        "icone": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png",
+        "uso": 3,
+        "vitorias": 1,
+        "winRate": 33.3
       },
       {
-        "nome": "Barbarian Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
-        "uso": 41,
-        "vitorias": 13,
-        "winRate": 31.7
+        "nome": "Skeleton Army",
+        "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
+        "uso": 3,
+        "vitorias": 1,
+        "winRate": 33.3
       },
       {
-        "nome": "Boss Bandit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/nuceG9o7rAyvyc7D3sp2QSiRYtSOEgraq0NJkDf729s.png",
-        "uso": 39,
-        "vitorias": 20,
-        "winRate": 51.3
-      },
-      {
-        "nome": "Fireball",
-        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 39,
-        "vitorias": 16,
-        "winRate": 41.0
-      },
-      {
-        "nome": "Baby Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
-        "uso": 37,
-        "vitorias": 21,
-        "winRate": 56.8
-      },
-      {
-        "nome": "Rocket",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ie07nQNK9CjhKOa4-arFAewi4EroqaA-86Xo7r5tx94.png",
-        "uso": 33,
-        "vitorias": 17,
-        "winRate": 51.5
-      },
-      {
-        "nome": "Mother Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png",
-        "uso": 32,
-        "vitorias": 17,
-        "winRate": 53.1
-      },
-      {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 31,
-        "vitorias": 15,
-        "winRate": 48.4
+        "nome": "Electro Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
+        "uso": 3,
+        "vitorias": 1,
+        "winRate": 33.3
       }
     ]
   },
@@ -657,217 +524,217 @@
     "faixa": "Arena 18 (Royal Champion)",
     "min_trofeus": 6500,
     "max_trofeus": 6999,
-    "total_partidas": 526,
+    "total_partidas": 52,
     "cartas": [
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 288,
-        "vitorias": 144,
-        "winRate": 50.0
-      },
-      {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 271,
-        "vitorias": 137,
-        "winRate": 50.6
-      },
-      {
-        "nome": "Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
-        "uso": 256,
-        "vitorias": 134,
-        "winRate": 52.3
-      },
-      {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 252,
-        "vitorias": 130,
-        "winRate": 51.6
-      },
-      {
-        "nome": "Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
-        "uso": 251,
-        "vitorias": 131,
-        "winRate": 52.2
-      },
-      {
-        "nome": "Spear Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/FSDFotjaXidI4ku_WFpVCTWS1hKGnFh1sxX0lxM43_E.png",
-        "uso": 250,
-        "vitorias": 130,
-        "winRate": 52.0
-      },
-      {
-        "nome": "Fire Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/16-BqusVvynIgYI8_Jci3LDC-r8AI_xaIYLgXqtlmS8.png",
-        "uso": 246,
-        "vitorias": 128,
-        "winRate": 52.0
-      },
-      {
-        "nome": "Giant",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Axr4ox5_b7edmLsoHxBX3vmgijAIibuF6RImTbqLlXE.png",
-        "uso": 244,
-        "vitorias": 126,
-        "winRate": 51.6
-      },
-      {
-        "nome": "Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 109,
-        "vitorias": 67,
-        "winRate": 61.5
-      },
       {
         "nome": "Mini P.E.K.K.A",
         "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 92,
-        "vitorias": 48,
-        "winRate": 52.2
+        "uso": 32,
+        "vitorias": 14,
+        "winRate": 43.8
       },
       {
         "nome": "Skeleton Army",
         "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 79,
-        "vitorias": 48,
-        "winRate": 60.8
-      },
-      {
-        "nome": "Mega Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 77,
-        "vitorias": 37,
-        "winRate": 48.1
-      },
-      {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 64,
-        "vitorias": 32,
-        "winRate": 50.0
-      },
-      {
-        "nome": "The Log",
-        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 61,
-        "vitorias": 29,
-        "winRate": 47.5
-      },
-      {
-        "nome": "Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 60,
-        "vitorias": 32,
+        "uso": 30,
+        "vitorias": 16,
         "winRate": 53.3
-      },
-      {
-        "nome": "Goblin Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 53,
-        "vitorias": 31,
-        "winRate": 58.5
-      },
-      {
-        "nome": "Zap",
-        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
-        "uso": 48,
-        "vitorias": 24,
-        "winRate": 50.0
-      },
-      {
-        "nome": "Arrows",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 46,
-        "vitorias": 25,
-        "winRate": 54.3
-      },
-      {
-        "nome": "Golden Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
-        "uso": 43,
-        "vitorias": 21,
-        "winRate": 48.8
-      },
-      {
-        "nome": "Inferno Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
-        "uso": 40,
-        "vitorias": 19,
-        "winRate": 47.5
-      },
-      {
-        "nome": "Barbarian Barrel",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
-        "uso": 39,
-        "vitorias": 15,
-        "winRate": 38.5
-      },
-      {
-        "nome": "Dart Goblin",
-        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
-        "uso": 38,
-        "vitorias": 19,
-        "winRate": 50.0
-      },
-      {
-        "nome": "Magic Archer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
-        "uso": 38,
-        "vitorias": 19,
-        "winRate": 50.0
       },
       {
         "nome": "Fireball",
         "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 37,
-        "vitorias": 14,
-        "winRate": 37.8
+        "uso": 30,
+        "vitorias": 13,
+        "winRate": 43.3
       },
       {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 36,
-        "vitorias": 18,
-        "winRate": 50.0
+        "nome": "Cannon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
+        "uso": 27,
+        "vitorias": 12,
+        "winRate": 44.4
       },
       {
-        "nome": "Tesla",
-        "icone": "https://api-assets.clashroyale.com/cards/300/OiwnGrxFMNiHetYEerE-UZt0L_uYNzFY7qV_CA_OxR4.png",
-        "uso": 34,
-        "vitorias": 18,
-        "winRate": 52.9
-      },
-      {
-        "nome": "Royal Hogs",
-        "icone": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png",
-        "uso": 34,
-        "vitorias": 19,
-        "winRate": 55.9
+        "nome": "Mother Witch",
+        "icone": "https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png",
+        "uso": 27,
+        "vitorias": 13,
+        "winRate": 48.1
       },
       {
         "nome": "Electro Wizard",
         "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
-        "uso": 33,
-        "vitorias": 18,
-        "winRate": 54.5
+        "uso": 26,
+        "vitorias": 12,
+        "winRate": 46.2
       },
       {
-        "nome": "Skeleton King",
-        "icone": "https://api-assets.clashroyale.com/cards/300/dCd69_wN9f8DxwuqOGtR4QgWhHIPIaTNxZ1e23RzAAc.png",
-        "uso": 32,
-        "vitorias": 19,
-        "winRate": 59.4
+        "nome": "Zap",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+        "uso": 22,
+        "vitorias": 11,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Firecracker",
+        "icone": "https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png",
+        "uso": 19,
+        "vitorias": 9,
+        "winRate": 47.4
+      },
+      {
+        "nome": "Balloon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/qBipxLo-3hhCnPrApp2Nn3b2NgrSrvwzWytvREev0CY.png",
+        "uso": 15,
+        "vitorias": 8,
+        "winRate": 53.3
+      },
+      {
+        "nome": "Royal Giant",
+        "icone": "https://api-assets.clashroyale.com/cards/300/mnlRaNtmfpQx2e6mp70sLd0ND-pKPF70Cf87_agEKg4.png",
+        "uso": 14,
+        "vitorias": 6,
+        "winRate": 42.9
+      },
+      {
+        "nome": "Witch",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+        "uso": 9,
+        "vitorias": 6,
+        "winRate": 66.7
+      },
+      {
+        "nome": "Mega Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
+        "uso": 9,
+        "vitorias": 6,
+        "winRate": 66.7
+      },
+      {
+        "nome": "Arrows",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
+        "uso": 6,
+        "vitorias": 4,
+        "winRate": 66.7
+      },
+      {
+        "nome": "Inferno Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
+        "uso": 5,
+        "vitorias": 2,
+        "winRate": 40.0
+      },
+      {
+        "nome": "Barbarian Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+        "uso": 5,
+        "vitorias": 2,
+        "winRate": 40.0
+      },
+      {
+        "nome": "Dart Goblin",
+        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
+        "uso": 5,
+        "vitorias": 2,
+        "winRate": 40.0
+      },
+      {
+        "nome": "Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
+        "uso": 5,
+        "vitorias": 4,
+        "winRate": 80.0
+      },
+      {
+        "nome": "Vines",
+        "icone": "https://api-assets.clashroyale.com/cards/300/V5sJlPuo2WBRtirJ1lGEPJA4NvQ0KPwFeMrpxLX5z_8.png",
+        "uso": 5,
+        "vitorias": 1,
+        "winRate": 20.0
+      },
+      {
+        "nome": "Prince",
+        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
+        "uso": 5,
+        "vitorias": 3,
+        "winRate": 60.0
+      },
+      {
+        "nome": "Hog Rider",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+        "uso": 4,
+        "vitorias": 3,
+        "winRate": 75.0
+      },
+      {
+        "nome": "Lightning",
+        "icone": "https://api-assets.clashroyale.com/cards/300/fpnESbYqe5GyZmaVVYe-SEu7tE0Kxh_HZyVigzvLjks.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Wall Breakers",
+        "icone": "https://api-assets.clashroyale.com/cards/300/_xPphEfC8eEwFNrfU3cMQG9-f5JaLQ31ARCA7l3XtW4.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Goblin Cage",
+        "icone": "https://api-assets.clashroyale.com/cards/300/vD24bBgK4rSq7wx5QEbuqChtPMRFviL_ep76GwQw1yA.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Ice Golem",
+        "icone": "https://api-assets.clashroyale.com/cards/300/r05cmpwV1o7i7FHodtZwW3fmjbXCW34IJCsDEV5cZC4.png",
+        "uso": 4,
+        "vitorias": 1,
+        "winRate": 25.0
       },
       {
         "nome": "Skeleton Barrel",
         "icone": "https://api-assets.clashroyale.com/cards/300/vCB4DWCcrGbTkarjcOiVz4aNDx6GWLm0yUepg9E1MGo.png",
-        "uso": 32,
-        "vitorias": 17,
-        "winRate": 53.1
+        "uso": 4,
+        "vitorias": 1,
+        "winRate": 25.0
+      },
+      {
+        "nome": "Bats",
+        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Ice Spirit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Valkyrie",
+        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+        "uso": 4,
+        "vitorias": 2,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Golden Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
+        "uso": 3,
+        "vitorias": 2,
+        "winRate": 66.7
+      },
+      {
+        "nome": "Lumberjack",
+        "icone": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
+        "uso": 3,
+        "vitorias": 1,
+        "winRate": 33.3
       }
     ]
   },
@@ -875,217 +742,217 @@
     "faixa": "Arena 19 (Ultimate Champion)",
     "min_trofeus": 7000,
     "max_trofeus": 7999,
-    "total_partidas": 431,
+    "total_partidas": 386,
     "cartas": [
       {
         "nome": "Skeleton Army",
         "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 151,
-        "vitorias": 76,
-        "winRate": 50.3
-      },
-      {
-        "nome": "Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 130,
-        "vitorias": 70,
-        "winRate": 53.8
-      },
-      {
-        "nome": "The Log",
-        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 121,
-        "vitorias": 70,
-        "winRate": 57.9
-      },
-      {
-        "nome": "Zap",
-        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
-        "uso": 119,
-        "vitorias": 58,
-        "winRate": 48.7
-      },
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 102,
-        "vitorias": 58,
+        "uso": 167,
+        "vitorias": 95,
         "winRate": 56.9
       },
       {
         "nome": "Goblin Barrel",
         "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 91,
-        "vitorias": 45,
-        "winRate": 49.5
-      },
-      {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 91,
-        "vitorias": 43,
-        "winRate": 47.3
+        "uso": 160,
+        "vitorias": 86,
+        "winRate": 53.8
       },
       {
         "nome": "Mini P.E.K.K.A",
         "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 89,
-        "vitorias": 49,
-        "winRate": 55.1
-      },
-      {
-        "nome": "Ice Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
-        "uso": 86,
-        "vitorias": 41,
-        "winRate": 47.7
-      },
-      {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 83,
-        "vitorias": 40,
-        "winRate": 48.2
-      },
-      {
-        "nome": "Golden Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
-        "uso": 79,
-        "vitorias": 43,
-        "winRate": 54.4
-      },
-      {
-        "nome": "Arrows",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 74,
-        "vitorias": 32,
-        "winRate": 43.2
-      },
-      {
-        "nome": "Magic Archer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
-        "uso": 74,
-        "vitorias": 31,
-        "winRate": 41.9
-      },
-      {
-        "nome": "Goblins",
-        "icone": "https://api-assets.clashroyale.com/cards/300/X_DQUye_OaS3QN6VC9CPw05Fit7wvSm3XegXIXKP--0.png",
-        "uso": 71,
-        "vitorias": 34,
-        "winRate": 47.9
-      },
-      {
-        "nome": "P.E.K.K.A",
-        "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
-        "uso": 68,
-        "vitorias": 37,
-        "winRate": 54.4
-      },
-      {
-        "nome": "Fireball",
-        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 68,
-        "vitorias": 36,
-        "winRate": 52.9
-      },
-      {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 67,
-        "vitorias": 38,
-        "winRate": 56.7
-      },
-      {
-        "nome": "Bats",
-        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
-        "uso": 64,
-        "vitorias": 35,
-        "winRate": 54.7
+        "uso": 133,
+        "vitorias": 64,
+        "winRate": 48.1
       },
       {
         "nome": "Mega Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 62,
-        "vitorias": 31,
+        "uso": 122,
+        "vitorias": 73,
+        "winRate": 59.8
+      },
+      {
+        "nome": "Valkyrie",
+        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+        "uso": 115,
+        "vitorias": 56,
+        "winRate": 48.7
+      },
+      {
+        "nome": "The Log",
+        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+        "uso": 106,
+        "vitorias": 52,
+        "winRate": 49.1
+      },
+      {
+        "nome": "Witch",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+        "uso": 104,
+        "vitorias": 51,
+        "winRate": 49.0
+      },
+      {
+        "nome": "Goblin Gang",
+        "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+        "uso": 102,
+        "vitorias": 53,
+        "winRate": 52.0
+      },
+      {
+        "nome": "Fireball",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
+        "uso": 100,
+        "vitorias": 54,
+        "winRate": 54.0
+      },
+      {
+        "nome": "Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
+        "uso": 100,
+        "vitorias": 60,
+        "winRate": 60.0
+      },
+      {
+        "nome": "Zap",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+        "uso": 93,
+        "vitorias": 51,
+        "winRate": 54.8
+      },
+      {
+        "nome": "Dart Goblin",
+        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
+        "uso": 78,
+        "vitorias": 39,
         "winRate": 50.0
-      },
-      {
-        "nome": "Mother Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/fO-Xah8XZkYKaSK9SCp3wnzwxtvIhun9NVY-zzte1Ng.png",
-        "uso": 62,
-        "vitorias": 35,
-        "winRate": 56.5
-      },
-      {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 59,
-        "vitorias": 33,
-        "winRate": 55.9
-      },
-      {
-        "nome": "Inferno Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
-        "uso": 56,
-        "vitorias": 26,
-        "winRate": 46.4
       },
       {
         "nome": "Princess",
         "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
-        "uso": 56,
-        "vitorias": 34,
-        "winRate": 60.7
+        "uso": 73,
+        "vitorias": 42,
+        "winRate": 57.5
       },
       {
-        "nome": "Baby Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
-        "uso": 54,
-        "vitorias": 28,
-        "winRate": 51.9
+        "nome": "Electro Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
+        "uso": 69,
+        "vitorias": 32,
+        "winRate": 46.4
+      },
+      {
+        "nome": "Arrows",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
+        "uso": 67,
+        "vitorias": 31,
+        "winRate": 46.3
+      },
+      {
+        "nome": "Magic Archer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Avli3W7BxU9HQ2SoLiXnBgGx25FoNXUSFm7OcAk68ek.png",
+        "uso": 63,
+        "vitorias": 30,
+        "winRate": 47.6
       },
       {
         "nome": "Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 53,
-        "vitorias": 24,
-        "winRate": 45.3
+        "uso": 62,
+        "vitorias": 30,
+        "winRate": 48.4
       },
       {
-        "nome": "Royal Hogs",
-        "icone": "https://api-assets.clashroyale.com/cards/300/ASSQJG_MoVq9e81HZzo4bynMnyLNpNJMfSLb3hqydOw.png",
+        "nome": "Firecracker",
+        "icone": "https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png",
+        "uso": 61,
+        "vitorias": 35,
+        "winRate": 57.4
+      },
+      {
+        "nome": "Golden Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
+        "uso": 58,
+        "vitorias": 31,
+        "winRate": 53.4
+      },
+      {
+        "nome": "Hog Rider",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+        "uso": 54,
+        "vitorias": 30,
+        "winRate": 55.6
+      },
+      {
+        "nome": "Baby Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
+        "uso": 51,
+        "vitorias": 30,
+        "winRate": 58.8
+      },
+      {
+        "nome": "Ice Spirit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
+        "uso": 49,
+        "vitorias": 22,
+        "winRate": 44.9
+      },
+      {
+        "nome": "Bats",
+        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
         "uso": 48,
-        "vitorias": 23,
-        "winRate": 47.9
+        "vitorias": 26,
+        "winRate": 54.2
       },
       {
         "nome": "Inferno Tower",
         "icone": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png",
-        "uso": 48,
-        "vitorias": 27,
-        "winRate": 56.2
-      },
-      {
-        "nome": "Prince",
-        "icone": "https://api-assets.clashroyale.com/cards/300/3JntJV62aY0G1Qh6LIs-ek-0ayeYFY3VItpG7cb9I60.png",
-        "uso": 45,
-        "vitorias": 25,
-        "winRate": 55.6
-      },
-      {
-        "nome": "Executioner",
-        "icone": "https://api-assets.clashroyale.com/cards/300/9XL5BP2mqzV8kza6KF8rOxrpCZTyuGLp2l413DTjEoM.png",
         "uso": 41,
         "vitorias": 19,
         "winRate": 46.3
       },
       {
-        "nome": "Mirror",
-        "icone": "https://api-assets.clashroyale.com/cards/300/wC6Cm9rKLEOk72zTsukVwxewKIoO4ZcMJun54zCPWvA.png",
+        "nome": "Ice Golem",
+        "icone": "https://api-assets.clashroyale.com/cards/300/r05cmpwV1o7i7FHodtZwW3fmjbXCW34IJCsDEV5cZC4.png",
         "uso": 41,
-        "vitorias": 23,
-        "winRate": 56.1
+        "vitorias": 21,
+        "winRate": 51.2
+      },
+      {
+        "nome": "Minions",
+        "icone": "https://api-assets.clashroyale.com/cards/300/yHGpoEnmUWPGV_hBbhn-Kk-Bs838OjGzWzJJlQpQKQA.png",
+        "uso": 40,
+        "vitorias": 22,
+        "winRate": 55.0
+      },
+      {
+        "nome": "Guards",
+        "icone": "https://api-assets.clashroyale.com/cards/300/1ArKfLJxYo6_NU_S9cAeIrfbXqWH0oULVJXedxBXQlU.png",
+        "uso": 39,
+        "vitorias": 20,
+        "winRate": 51.3
+      },
+      {
+        "nome": "Goblin Cage",
+        "icone": "https://api-assets.clashroyale.com/cards/300/vD24bBgK4rSq7wx5QEbuqChtPMRFviL_ep76GwQw1yA.png",
+        "uso": 37,
+        "vitorias": 21,
+        "winRate": 56.8
+      },
+      {
+        "nome": "Skeleton Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/vCB4DWCcrGbTkarjcOiVz4aNDx6GWLm0yUepg9E1MGo.png",
+        "uso": 36,
+        "vitorias": 18,
+        "winRate": 50.0
+      },
+      {
+        "nome": "Barbarians",
+        "icone": "https://api-assets.clashroyale.com/cards/300/TvJsuu2S4yhyk1jVYUAQwdKOnW4U77KuWWOTPOWnwfI.png",
+        "uso": 35,
+        "vitorias": 21,
+        "winRate": 60.0
       }
     ]
   },
@@ -1093,217 +960,217 @@
     "faixa": "Arena 20+ (Top Ladder)",
     "min_trofeus": 8000,
     "max_trofeus": 99999,
-    "total_partidas": 309,
+    "total_partidas": 1146,
     "cartas": [
-      {
-        "nome": "Witch",
-        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
-        "uso": 117,
-        "vitorias": 63,
-        "winRate": 53.8
-      },
-      {
-        "nome": "The Log",
-        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
-        "uso": 109,
-        "vitorias": 61,
-        "winRate": 56.0
-      },
-      {
-        "nome": "Mega Knight",
-        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
-        "uso": 103,
-        "vitorias": 52,
-        "winRate": 50.5
-      },
-      {
-        "nome": "Mini P.E.K.K.A",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
-        "uso": 96,
-        "vitorias": 49,
-        "winRate": 51.0
-      },
-      {
-        "nome": "Firecracker",
-        "icone": "https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png",
-        "uso": 82,
-        "vitorias": 44,
-        "winRate": 53.7
-      },
-      {
-        "nome": "Valkyrie",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
-        "uso": 82,
-        "vitorias": 45,
-        "winRate": 54.9
-      },
-      {
-        "nome": "Fireball",
-        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
-        "uso": 78,
-        "vitorias": 44,
-        "winRate": 56.4
-      },
-      {
-        "nome": "Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
-        "uso": 73,
-        "vitorias": 38,
-        "winRate": 52.1
-      },
-      {
-        "nome": "Hog Rider",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
-        "uso": 71,
-        "vitorias": 40,
-        "winRate": 56.3
-      },
       {
         "nome": "Skeleton Army",
         "icone": "https://api-assets.clashroyale.com/cards/300/fAOToOi1pRy7svN2xQS6mDkhQw2pj9m_17FauaNqyl4.png",
-        "uso": 66,
-        "vitorias": 31,
-        "winRate": 47.0
+        "uso": 347,
+        "vitorias": 167,
+        "winRate": 48.1
       },
       {
         "nome": "Knight",
         "icone": "https://api-assets.clashroyale.com/cards/300/jAj1Q5rclXxU9kVImGqSJxa4wEMfEhvwNQ_4jiGUuqg.png",
-        "uso": 61,
-        "vitorias": 32,
-        "winRate": 52.5
+        "uso": 315,
+        "vitorias": 174,
+        "winRate": 55.2
       },
       {
-        "nome": "Skeletons",
-        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
-        "uso": 61,
-        "vitorias": 35,
-        "winRate": 57.4
+        "nome": "Mega Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/O2NycChSNhn_UK9nqBXUhhC_lILkiANzPuJjtjoz0CE.png",
+        "uso": 304,
+        "vitorias": 149,
+        "winRate": 49.0
       },
       {
-        "nome": "Tesla",
-        "icone": "https://api-assets.clashroyale.com/cards/300/OiwnGrxFMNiHetYEerE-UZt0L_uYNzFY7qV_CA_OxR4.png",
-        "uso": 57,
-        "vitorias": 35,
-        "winRate": 61.4
-      },
-      {
-        "nome": "P.E.K.K.A",
-        "icone": "https://api-assets.clashroyale.com/cards/300/MlArURKhn_zWAZY-Xj1qIRKLVKquarG25BXDjUQajNs.png",
-        "uso": 55,
-        "vitorias": 34,
-        "winRate": 61.8
+        "nome": "The Log",
+        "icone": "https://api-assets.clashroyale.com/cards/300/_iDwuDLexHPFZ_x4_a0eP-rxCS6vwWgTs6DLauwwoaY.png",
+        "uso": 293,
+        "vitorias": 158,
+        "winRate": 53.9
       },
       {
         "nome": "Arrows",
         "icone": "https://api-assets.clashroyale.com/cards/300/Flsoci-Y6y8ZFVi5uRFTmgkPnCmMyMVrU7YmmuPvSBo.png",
-        "uso": 54,
-        "vitorias": 30,
-        "winRate": 55.6
+        "uso": 279,
+        "vitorias": 163,
+        "winRate": 58.4
       },
       {
-        "nome": "Zap",
-        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
-        "uso": 54,
-        "vitorias": 26,
-        "winRate": 48.1
-      },
-      {
-        "nome": "Barbarians",
-        "icone": "https://api-assets.clashroyale.com/cards/300/TvJsuu2S4yhyk1jVYUAQwdKOnW4U77KuWWOTPOWnwfI.png",
-        "uso": 44,
-        "vitorias": 23,
-        "winRate": 52.3
-      },
-      {
-        "nome": "Cannon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
-        "uso": 41,
-        "vitorias": 16,
-        "winRate": 39.0
-      },
-      {
-        "nome": "Inferno Dragon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/y5HDbKtTbWG6En6TGWU0xoVIGs1-iQpIP4HC-VM7u8A.png",
-        "uso": 40,
-        "vitorias": 19,
-        "winRate": 47.5
-      },
-      {
-        "nome": "Tombstone",
-        "icone": "https://api-assets.clashroyale.com/cards/300/LjSfSbwQfkZuRJY4pVxKspZ-a0iM5KAhU8w-a_N5Z7Y.png",
-        "uso": 39,
-        "vitorias": 21,
-        "winRate": 53.8
-      },
-      {
-        "nome": "Princess",
-        "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
-        "uso": 39,
-        "vitorias": 19,
+        "nome": "Firecracker",
+        "icone": "https://api-assets.clashroyale.com/cards/300/c1rL3LO1U2D9-TkeFfAC18gP3AO8ztSwrcHMZplwL2Q.png",
+        "uso": 271,
+        "vitorias": 132,
         "winRate": 48.7
-      },
-      {
-        "nome": "Musketeer",
-        "icone": "https://api-assets.clashroyale.com/cards/300/Tex1C48UTq9FKtAX-3tzG0FJmc9jzncUZG3bb5Vf-Ds.png",
-        "uso": 37,
-        "vitorias": 17,
-        "winRate": 45.9
-      },
-      {
-        "nome": "Balloon",
-        "icone": "https://api-assets.clashroyale.com/cards/300/qBipxLo-3hhCnPrApp2Nn3b2NgrSrvwzWytvREev0CY.png",
-        "uso": 36,
-        "vitorias": 19,
-        "winRate": 52.8
-      },
-      {
-        "nome": "Inferno Tower",
-        "icone": "https://api-assets.clashroyale.com/cards/300/GSHY_wrooMMLET6bG_WJB8redtwx66c4i80ipi4gYOM.png",
-        "uso": 35,
-        "vitorias": 23,
-        "winRate": 65.7
-      },
-      {
-        "nome": "Giant Skeleton",
-        "icone": "https://api-assets.clashroyale.com/cards/300/0p0gd0XaVRu1Hb1iSG1hTYbz2AN6aEiZnhaAib5O8Z8.png",
-        "uso": 34,
-        "vitorias": 20,
-        "winRate": 58.8
-      },
-      {
-        "nome": "Clone",
-        "icone": "https://api-assets.clashroyale.com/cards/300/mHVCet-1TkwWq-pxVIU2ZWY9_2z7Z7wtP25ArEUsP_g.png",
-        "uso": 33,
-        "vitorias": 13,
-        "winRate": 39.4
       },
       {
         "nome": "Goblin Barrel",
         "icone": "https://api-assets.clashroyale.com/cards/300/CoZdp5PpsTH858l212lAMeJxVJ0zxv9V-f5xC8Bvj5g.png",
-        "uso": 32,
-        "vitorias": 16,
+        "uso": 266,
+        "vitorias": 132,
+        "winRate": 49.6
+      },
+      {
+        "nome": "Witch",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cfwk1vzehVyHC-uloEIH6NOI0hOdofCutR5PyhIgO6w.png",
+        "uso": 254,
+        "vitorias": 127,
         "winRate": 50.0
       },
       {
-        "nome": "Skeleton King",
-        "icone": "https://api-assets.clashroyale.com/cards/300/dCd69_wN9f8DxwuqOGtR4QgWhHIPIaTNxZ1e23RzAAc.png",
-        "uso": 29,
-        "vitorias": 14,
+        "nome": "Mini P.E.K.K.A",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Fmltc4j3Ve9vO_xhHHPEO3PRP3SmU2oKp2zkZQHRZT4.png",
+        "uso": 227,
+        "vitorias": 108,
+        "winRate": 47.6
+      },
+      {
+        "nome": "Fireball",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lZD9MILQv7O-P3XBr_xOLS5idwuz3_7Ws9G60U36yhc.png",
+        "uso": 225,
+        "vitorias": 113,
+        "winRate": 50.2
+      },
+      {
+        "nome": "Valkyrie",
+        "icone": "https://api-assets.clashroyale.com/cards/300/0lIoYf3Y_plFTzo95zZL93JVxpfb3MMgFDDhgSDGU9A.png",
+        "uso": 220,
+        "vitorias": 112,
+        "winRate": 50.9
+      },
+      {
+        "nome": "Dart Goblin",
+        "icone": "https://api-assets.clashroyale.com/cards/300/BmpK3bqEAviflqHCdxxnfm-_l3pRPJw3qxHkwS55nCY.png",
+        "uso": 220,
+        "vitorias": 106,
+        "winRate": 48.2
+      },
+      {
+        "nome": "Skeletons",
+        "icone": "https://api-assets.clashroyale.com/cards/300/oO7iKMU5m0cdxhYPZA3nWQiAUh2yoGgdThLWB1rVSec.png",
+        "uso": 214,
+        "vitorias": 115,
+        "winRate": 53.7
+      },
+      {
+        "nome": "Zap",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7dxh2-yCBy1x44GrBaL29vjqnEEeJXHEAlsi5g6D1eY.png",
+        "uso": 211,
+        "vitorias": 102,
         "winRate": 48.3
       },
       {
-        "nome": "Electro Spirit",
-        "icone": "https://api-assets.clashroyale.com/cards/300/WKd4-IAFsgPpMo7dDi9sujmYjRhOMEWiE07OUJpvD9g.png",
-        "uso": 28,
-        "vitorias": 14,
+        "nome": "Balloon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/qBipxLo-3hhCnPrApp2Nn3b2NgrSrvwzWytvREev0CY.png",
+        "uso": 198,
+        "vitorias": 97,
+        "winRate": 49.0
+      },
+      {
+        "nome": "Wizard",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Mej7vnv4H_3p_8qPs_N6_GKahy6HDr7pU7i9eTHS84U.png",
+        "uso": 197,
+        "vitorias": 84,
+        "winRate": 42.6
+      },
+      {
+        "nome": "Baby Dragon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/cjC9n4AvEZJ3urkVh-rwBkJ-aRSsydIMqSAV48hAih0.png",
+        "uso": 190,
+        "vitorias": 100,
+        "winRate": 52.6
+      },
+      {
+        "nome": "Hog Rider",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Ubu0oUl8tZkusnkZf8Xv9Vno5IO29Y-jbZ4fhoNJ5oc.png",
+        "uso": 187,
+        "vitorias": 85,
+        "winRate": 45.5
+      },
+      {
+        "nome": "Cannon",
+        "icone": "https://api-assets.clashroyale.com/cards/300/nZK1y-beLxO5vnlyUhK6-2zH2NzXJwqykcosqQ1cmZ8.png",
+        "uso": 176,
+        "vitorias": 85,
+        "winRate": 48.3
+      },
+      {
+        "nome": "Princess",
+        "icone": "https://api-assets.clashroyale.com/cards/300/bAwMcqp9EKVIKH3ZLm_m0MqZFSG72zG-vKxpx8aKoVs.png",
+        "uso": 164,
+        "vitorias": 81,
+        "winRate": 49.4
+      },
+      {
+        "nome": "Musketeer",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Tex1C48UTq9FKtAX-3tzG0FJmc9jzncUZG3bb5Vf-Ds.png",
+        "uso": 162,
+        "vitorias": 81,
         "winRate": 50.0
       },
       {
-        "nome": "Electro Wizard",
-        "icone": "https://api-assets.clashroyale.com/cards/300/RsFaHgB3w6vXsTjXdPr3x8l_GbV9TbOUCvIx07prbrQ.png",
-        "uso": 26,
-        "vitorias": 8,
-        "winRate": 30.8
+        "nome": "Barbarian Barrel",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Gb0G1yNy0i5cIGUHin8uoFWxqntNtRPhY_jeMXg7HnA.png",
+        "uso": 146,
+        "vitorias": 79,
+        "winRate": 54.1
+      },
+      {
+        "nome": "Archers",
+        "icone": "https://api-assets.clashroyale.com/cards/300/W4Hmp8MTSdXANN8KdblbtHwtsbt0o749BbxNqmJYfA8.png",
+        "uso": 139,
+        "vitorias": 78,
+        "winRate": 56.1
+      },
+      {
+        "nome": "Goblin Gang",
+        "icone": "https://api-assets.clashroyale.com/cards/300/NHflxzVAQT4oAz7eDfdueqpictb5vrWezn1nuqFhE4w.png",
+        "uso": 138,
+        "vitorias": 71,
+        "winRate": 51.4
+      },
+      {
+        "nome": "Golden Knight",
+        "icone": "https://api-assets.clashroyale.com/cards/300/WJd207D0O1sN-l1FTb8P9KhYL2oF5jY26vRUfTUW3FQ.png",
+        "uso": 130,
+        "vitorias": 68,
+        "winRate": 52.3
+      },
+      {
+        "nome": "Minion Horde",
+        "icone": "https://api-assets.clashroyale.com/cards/300/Wyjq5l0IXHTkX9Rmpap6HaH08MvjbxFp1xBO9a47YSI.png",
+        "uso": 127,
+        "vitorias": 69,
+        "winRate": 54.3
+      },
+      {
+        "nome": "Lumberjack",
+        "icone": "https://api-assets.clashroyale.com/cards/300/E6RWrnCuk13xMX5OE1EQtLEKTZQV6B78d00y8PlXt6Q.png",
+        "uso": 127,
+        "vitorias": 66,
+        "winRate": 52.0
+      },
+      {
+        "nome": "Giant Snowball",
+        "icone": "https://api-assets.clashroyale.com/cards/300/7MaJLa6hK9WN2_VIshuh5DIDfGwm0wEv98gXtAxLDPs.png",
+        "uso": 111,
+        "vitorias": 66,
+        "winRate": 59.5
+      },
+      {
+        "nome": "Bats",
+        "icone": "https://api-assets.clashroyale.com/cards/300/EnIcvO21hxiNpoI-zO6MDjLmzwPbq8Z4JPo2OKoVUjU.png",
+        "uso": 111,
+        "vitorias": 49,
+        "winRate": 44.1
+      },
+      {
+        "nome": "Ice Spirit",
+        "icone": "https://api-assets.clashroyale.com/cards/300/lv1budiafU9XmSdrDkk0NYyqASAFYyZ06CPysXKZXlA.png",
+        "uso": 110,
+        "vitorias": 57,
+        "winRate": 51.8
       }
     ]
   }
